@@ -29,7 +29,7 @@
       </el-table-column>
       <el-table-column prop="id" label="ID" width="80">
       </el-table-column>
-      <el-table-column prop="username" label="工号" width="140">
+      <el-table-column prop="username" label="学号" width="140">
       </el-table-column>
       <el-table-column prop="nickname" label="姓名" width="120">
       </el-table-column>
@@ -47,11 +47,11 @@
               cancel-button-text='我再想想'
               icon="el-icon-info"
               icon-color="#67C23A"
-              title="确定选择这位导师嘛？"
+              title="确定选择这位学生嘛？"
               @confirm=" "
 
           >
-            <el-button type="success" icon="el-icon-check" slot="reference" style="margin-left: 5px" v-if="user.role==='学生'">选择</el-button>
+            <el-button type="success" icon="el-icon-check" slot="reference" style="margin-left: 5px" >选择</el-button>
           </el-popconfirm>
         </template>
       </el-table-column>
@@ -68,20 +68,15 @@
       </el-pagination>
     </div>
     <el-dialog
-        title="导师详情"
+        title="学生详情"
         :visible.sync="dialogFormVisible"
         width="30%"
     >
       <el-form  label-width="80px" size="small">
-        <el-form-item label="职称">
-          <el-input v-model="form.title" auto-complete="off"></el-input>
+        <el-form-item label="绩点">
+          <el-input v-model="form.gpa" auto-complete="off"></el-input>
         </el-form-item>
-        <el-form-item label="招生人数">
-          <el-input v-model="form.enrollment" auto-complete="off"></el-input>
-        </el-form-item>
-        <el-form-item label="要求">
-          <el-input v-model="form.requirement" auto-complete="off"></el-input>
-        </el-form-item>
+
         <el-form-item label="自我介绍">
           <el-input v-model="form.introduction" auto-complete="off"></el-input>
         </el-form-item>
@@ -100,7 +95,7 @@
 <script>
 
 export default {
-  name: "Intention.vue",
+  name: "StudentInfo.vue",
   data(){
     return{
       tableData: [],
@@ -114,9 +109,7 @@ export default {
       form:{},
       multipleSelection:[],
 
-      title:"",
-      enrollment:0,
-      requirement:"",
+      gpa:0,
       introduction:"",
 
 
@@ -131,14 +124,14 @@ export default {
   },
   methods:{
     load() {
-      this.request.get("/user/page/findSelectedTeacher",{
+      this.request.get("/user/page/student",{
         params:{
+          id:this.user.id,
           pageNum:this.pageNum,
           pageSize:this.pageSize,
           username:this.username,
           email:this.email,
           address:this.address,
-          id:this.user.id,
         }
       }).then(res =>{
         console.log(res)
@@ -164,12 +157,12 @@ export default {
 
     //查看老师的详细信息
     handleDetail(id){
-      this.request.get("/teacher/"+id).then(res=>{
+      this.request.get("/student/"+id).then(res=>{
             if(res.data){
               this.form=Object.assign({},res.data)
               this.dialogFormVisible=true
             }else {
-              this.$message.error("查询失败！老师没有留下任何信息！")
+              this.$message.error("查询失败！学生没有填写任何信息！")
             }
           }
 

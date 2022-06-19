@@ -51,7 +51,7 @@
               @confirm=" "
 
           >
-            <el-button type="success" icon="el-icon-check" slot="reference" style="margin-left: 5px" v-if="user.role=='学生'">选择</el-button>
+            <el-button type="success" icon="el-icon-check" slot="reference" style="margin-left: 5px" v-if="user.role==='学生'">选择</el-button>
           </el-popconfirm>
         </template>
       </el-table-column>
@@ -100,7 +100,7 @@
 <script>
 
 export default {
-  name: "Teacher.vue",
+  name: "TeacherInfo.vue",
   data(){
     return{
       tableData: [],

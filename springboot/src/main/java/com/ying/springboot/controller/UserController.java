@@ -111,5 +111,40 @@ public class UserController {
         return Result.success(userService.page(page,queryWrapper));
 
     }
+    //分页查询志愿学生
+    @GetMapping("/page/student")
+    public Result findStudent(@RequestParam Integer pageNum,
+                              @RequestParam Integer pageSize,
+                              @RequestParam (defaultValue="") Integer id
+
+    ){
+
+        IPage<User> page=new Page<>(pageNum,pageSize);
+        QueryWrapper<User> queryWrapper=new QueryWrapper<>();
+        queryWrapper.inSql("id","SELECT student_id FROM intention WHERE teacher_id="+id+" AND orders=1");
+
+
+        return Result.success(userService.page(page,queryWrapper));
+
     }
+    //分页查询志愿老师
+    @GetMapping("/page/findSelectedTeacher")
+    public Result findSelectedTeacher(@RequestParam Integer pageNum,
+                              @RequestParam Integer pageSize,
+                              @RequestParam (defaultValue="") Integer id
+
+    ){
+
+        IPage<User> page=new Page<>(pageNum,pageSize);
+        QueryWrapper<User> queryWrapper=new QueryWrapper<>();
+        queryWrapper.inSql("id","SELECT teacher_id FROM intention WHERE student_id="+id);
+
+
+        return Result.success(userService.page(page,queryWrapper));
+
+    }
+
+
+
+}
 

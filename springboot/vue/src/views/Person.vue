@@ -26,11 +26,11 @@
       <el-form-item label="地址">
         <el-input type="textarea" v-model="form.address" autocomplete="off" autosize></el-input>
       </el-form-item>
-      <el-form-item label="招生人数" v-if="user.role=='老师'" >
+      <el-form-item label="招生人数" v-if="user.role==='老师'" >
         <el-input v-model="extra.enrollment" autocomplete="off"></el-input>
       </el-form-item>
 
-      <el-form-item label="要求"  v-if="user.role=='老师'">
+      <el-form-item label="要求"  v-if="user.role==='老师'">
         <el-input type="textarea" v-model="extra.requirement" autocomplete="off" autosize></el-input>
       </el-form-item>
       <el-form-item label="自我介绍">
@@ -68,7 +68,7 @@ export default {
       return (await this.request.get("/user/" + this.user.id)).data
     },
     getUserInfo(id,role){
-      if(role=="老师"){
+      if(role==="老师"){
         this.request.get("/teacher/"+id).then(res=>{
           if(res.data){
             this.extra=Object.assign({},res.data)
@@ -79,7 +79,7 @@ export default {
       )
 
       }
-      else if(role=="学生"){this.request.get("/student/"+id).then(res=>{
+      else if(role==="学生"){this.request.get("/student/"+id).then(res=>{
             if(res.data){
               this.extra=Object.assign({},res.data)
             }else {

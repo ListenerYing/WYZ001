@@ -33,7 +33,7 @@
         <i class="el-icon-menu"></i>
         <span slot="title">教师功能</span>
       </template>
-      <el-menu-item index="/intention">
+      <el-menu-item index="/studentInfo">
         <i class="el-icon-search"></i>
         <span slot="title">查看报名</span>
       </el-menu-item>

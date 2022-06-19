@@ -13,7 +13,9 @@ const routes = [
       { path: 'home', name: '首页', component: () => import('../views/Home.vue')},
       { path: 'course', name: '课程管理', component: () => import('../views/Course.vue')},
       { path: 'teacherInfo', name: '导师信息', component: () => import('../views/TeacherInfo.vue')},
-      { path: 'teacher', name: '导师界面', component: () => import('../views/Teacher.vue')},
+      { path: 'intention', name: '志愿信息', component: () => import('../views/Intention.vue')},
+      { path: 'studentInfo', name: '查看报名', component: () => import('../views/StudentInfo.vue')},
+
       {
         path: 'im',
         name: 'Im',

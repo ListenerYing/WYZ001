@@ -10,7 +10,7 @@ import lombok.Setter;
 
 /**
  * <p>
- * 
+ *
  * </p>
  *
  * @author 应健霆
@@ -31,7 +31,7 @@ public class Intention implements Serializable {
     private Integer teacherId;
 
     @ApiModelProperty("志愿顺序")
-    private Integer order;
+    private Integer sequence;
 
 
 }
