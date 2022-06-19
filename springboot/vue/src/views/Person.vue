@@ -65,7 +65,7 @@ export default {
   },
   methods: {
     async getUser() {
-      return (await this.request.get("/user/username/" + this.user.username)).data
+      return (await this.request.get("/user/" + this.user.id)).data
     },
     getUserInfo(id,role){
       if(role=="老师"){
@@ -79,7 +79,7 @@ export default {
       )
 
       }
-      if(role=="学生"){this.request.get("/student/"+id).then(res=>{
+      else if(role=="学生"){this.request.get("/student/"+id).then(res=>{
             if(res.data){
               this.extra=Object.assign({},res.data)
             }else {

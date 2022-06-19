@@ -33,7 +33,7 @@ export default {
       isCollapse:false,
       sideWith:200,
       logoTextShow:true,
-
+      user:localStorage.getItem("user") ? JSON.parse(localStorage.getItem("user")) : {}
     }
   },
   components:{
@@ -58,6 +58,17 @@ export default {
 
 
     },
+  //   getUser() {
+  //     let username = localStorage.getItem("user") ? JSON.parse(localStorage.getItem("user")).username : ""
+  //     if (username) {
+  //       // 从后台获取User数据
+  //       this.request.get("/user/username/" + username).then(res => {
+  //         // 重新赋值后台的最新User数据
+  //         this.user = res.data
+  //       })
+  //     }
+  //
+  // }
 
   }
 }

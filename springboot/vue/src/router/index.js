@@ -12,7 +12,8 @@ const routes = [
     children: [
       { path: 'home', name: '首页', component: () => import('../views/Home.vue')},
       { path: 'course', name: '课程管理', component: () => import('../views/Course.vue')},
-      { path: 'teacher', name: '导师信息', component: () => import('../views/Teacher.vue')},
+      { path: 'teacherInfo', name: '导师信息', component: () => import('../views/TeacherInfo.vue')},
+      { path: 'teacher', name: '导师界面', component: () => import('../views/Teacher.vue')},
       {
         path: 'im',
         name: 'Im',

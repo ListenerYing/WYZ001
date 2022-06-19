@@ -44,6 +44,9 @@ public class UserController {
     //查询所有数据
     @GetMapping
     public Result getAll(){return Result.success(userService.list());}
+    //根据id查询
+    @GetMapping("/{id}")
+    public Result getById(@PathVariable Integer id){return Result.success(userService.getById(id));}
     //新增和修改
     @PostMapping
     public Result save(@RequestBody User user){return Result.success(userService.saveOrUpdate(user));}
