@@ -1,4 +1,4 @@
-package com.ying.springboot.service.Impl;
+package com.ying.springboot.service.impl;
 
 import cn.hutool.core.bean.BeanUtil;
 import cn.hutool.log.Log;

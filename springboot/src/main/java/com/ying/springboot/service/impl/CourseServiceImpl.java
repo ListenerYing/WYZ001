@@ -1,4 +1,4 @@
-package com.ying.springboot.service.Impl;
+package com.ying.springboot.service.impl;
 
 import com.baomidou.mybatisplus.extension.plugins.pagination.Page;
 import com.ying.springboot.entity.Course;

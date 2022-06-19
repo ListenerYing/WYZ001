@@ -23,7 +23,7 @@
       <i class="el-icon-user"></i>
       <span slot="title">导师信息</span>
     </el-menu-item>
-    <el-menu-item index="/teacherInfo">
+    <el-menu-item index="/intention">
       <i class="el-icon-reading"></i>
       <span slot="title">志愿信息</span>
     </el-menu-item>
@@ -33,11 +33,11 @@
         <i class="el-icon-menu"></i>
         <span slot="title">教师功能</span>
       </template>
-      <el-menu-item index="/teacher">
+      <el-menu-item index="/intention">
         <i class="el-icon-search"></i>
         <span slot="title">查看报名</span>
       </el-menu-item>
-      <el-menu-item index="/teacher">
+      <el-menu-item index="/intention">
         <i class="el-icon-search"></i>
         <span slot="title">查看已选</span>
       </el-menu-item>

@@ -68,7 +68,7 @@
       </el-pagination>
     </div>
     <el-dialog
-        title="用户信息"
+        title="导师详情"
         :visible.sync="dialogFormVisible"
         width="30%"
     >
