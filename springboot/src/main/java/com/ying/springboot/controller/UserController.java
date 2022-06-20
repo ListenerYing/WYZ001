@@ -121,7 +121,7 @@ public class UserController {
 
         IPage<User> page=new Page<>(pageNum,pageSize);
         QueryWrapper<User> queryWrapper=new QueryWrapper<>();
-        queryWrapper.inSql("id","SELECT student_id FROM intention WHERE teacher_id="+id+" AND orders=1");
+        queryWrapper.inSql("id","SELECT student_id FROM intention WHERE teacher_id="+id+" AND sequence=1");
 
 
         return Result.success(userService.page(page,queryWrapper));

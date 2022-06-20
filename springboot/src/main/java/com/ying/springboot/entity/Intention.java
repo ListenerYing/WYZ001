@@ -1,6 +1,7 @@
 package com.ying.springboot.entity;
 
 import com.baomidou.mybatisplus.annotation.IdType;
+import com.baomidou.mybatisplus.annotation.TableField;
 import com.baomidou.mybatisplus.annotation.TableId;
 import java.io.Serializable;
 import io.swagger.annotations.ApiModel;
@@ -32,6 +33,9 @@ public class Intention implements Serializable {
 
     @ApiModelProperty("志愿顺序")
     private Integer sequence;
+
+    @TableField(exist = false)
+    private String teacherName;
 
 
 }

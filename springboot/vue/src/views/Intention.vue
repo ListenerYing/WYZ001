@@ -27,32 +27,18 @@
           width="55"
       >
       </el-table-column>
-      <el-table-column prop="id" label="ID" width="80">
+
+      <el-table-column prop="sequence" label="志愿" width="140">
       </el-table-column>
-      <el-table-column prop="username" label="工号" width="140">
+      <el-table-column prop="teacherName" label="教师" width="120">
       </el-table-column>
-      <el-table-column prop="nickname" label="姓名" width="120">
-      </el-table-column>
-      <el-table-column prop="email" label="邮箱">
-      </el-table-column>
-      <el-table-column prop="phone" label="电话">
-      </el-table-column>
-      <el-table-column prop="address" label="地址">
-      </el-table-column>
+
       <el-table-column label="操作" width="200" align="center">
         <template slot-scope="scope">
-          <el-button type="info"  @click="handleDetail(scope.row.id)">查看详情</el-button>
-          <el-popconfirm
-              confirm-button-text='确定'
-              cancel-button-text='我再想想'
-              icon="el-icon-info"
-              icon-color="#67C23A"
-              title="确定选择这位导师嘛？"
-              @confirm=" "
+          <el-button type="info"  @click="handleDetail(scope.row.teacherId)">查看详情</el-button>
 
-          >
-            <el-button type="success" icon="el-icon-check" slot="reference" style="margin-left: 5px" v-if="user.role==='学生'">选择</el-button>
-          </el-popconfirm>
+            <el-button type="success" icon="el-icon-upload2" slot="reference" style="margin-left: 5px" v-if="scope.row.sequence>1" @click="handleUp(scope.row.id,scope.row.sequence,scope.row.studentId)">{{scope.row.sequence}}上移</el-button>
+
         </template>
       </el-table-column>
     </el-table>
@@ -88,8 +74,8 @@
 
       </el-form>
       <div slot="footer" class="dialog-footer">
-        <el-button @click="dialogFormVisible=false">取消</el-button>
-        <el-button type="primary" @click="save">确定</el-button>
+
+        <el-button type="primary" @click="dialogFormVisible=false">确定</el-button>
       </div>
 
 
@@ -107,6 +93,7 @@ export default {
       pageNum: 1,
       pageSize: 5,
       username:"",
+      nickname:"",
       email:"",
       address:"",
       total:0,
@@ -119,6 +106,9 @@ export default {
       requirement:"",
       introduction:"",
 
+      // id:0,
+      // sequence:0,
+      // studentId:0,
 
       user:localStorage.getItem("user") ? JSON.parse(localStorage.getItem("user")) : {}
 
@@ -131,18 +121,16 @@ export default {
   },
   methods:{
     load() {
-      this.request.get("/user/page/findSelectedTeacher",{
+      this.request.get("/intention/page",{
         params:{
           pageNum:this.pageNum,
           pageSize:this.pageSize,
-          username:this.username,
-          email:this.email,
-          address:this.address,
+
           id:this.user.id,
         }
       }).then(res =>{
         console.log(res)
-        this.tableData=res.data.records
+        this.tableData=res.data
         this.total=res.data.total
       })
     },
@@ -176,6 +164,41 @@ export default {
       )
       // this.form=Object.assign({},row)
       // this.dialogFormVisible=true
+    },
+
+    //处理志愿顺序 存在bug 暂未解决 2022/6/20
+    handleUp(id,sequence,studentId){
+      this.request.get("/intention/plus",{
+        params:{
+          studentId:studentId,
+          sequence:sequence,
+        }
+      }).then(res=>{
+        if(res.data){
+         this.$message("+1成功")
+        }else {
+          this.$message.error("+1失败")
+        }
+      })
+
+      this.request.get("/intention/reduce",{
+        params:{
+          id:id,
+          sequence:sequence,
+        }
+      }).then(res=>{
+        if(res.data){
+          this.$message("-1成功")
+        }else {
+          this.$message.error("-1失败")
+        }
+      })
+      location. reload()
+      // this.load()
+
+
+
+
     },
     del(id){
       this.request.delete("/user/"+id).then(res=>{

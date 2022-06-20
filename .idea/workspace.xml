@@ -5,8 +5,13 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="64e422a5-1b65-454a-8710-985bea71f75a" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/jarRepositories.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/jarRepositories.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/springboot/src/main/java/com/ying/springboot/SpringbootApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/springboot/src/main/java/com/ying/springboot/SpringbootApplication.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/springboot/src/main/java/com/ying/springboot/controller/IntentionController.java" beforeDir="false" afterPath="$PROJECT_DIR$/springboot/src/main/java/com/ying/springboot/controller/IntentionController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/springboot/src/main/java/com/ying/springboot/controller/UserController.java" beforeDir="false" afterPath="$PROJECT_DIR$/springboot/src/main/java/com/ying/springboot/controller/UserController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/springboot/src/main/java/com/ying/springboot/entity/Intention.java" beforeDir="false" afterPath="$PROJECT_DIR$/springboot/src/main/java/com/ying/springboot/entity/Intention.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/springboot/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/springboot/src/main/resources/application.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/springboot/vue/src/views/Intention.vue" beforeDir="false" afterPath="$PROJECT_DIR$/springboot/vue/src/views/Intention.vue" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -62,7 +67,7 @@
     <property name="project.structure.last.edited" value="Modules" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2" />
-    <property name="settings.editor.selected.configurable" value="project.propVCSSupport.Mappings" />
+    <property name="settings.editor.selected.configurable" value="MavenSettings" />
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
   <component name="RecentsManager">
@@ -136,7 +141,10 @@
       <workItem from="1655550370264" duration="1040000" />
       <workItem from="1655609899680" duration="663000" />
       <workItem from="1655610593939" duration="15824000" />
-      <workItem from="1655632568458" duration="13016000" />
+      <workItem from="1655632568458" duration="13329000" />
+      <workItem from="1655686849923" duration="531000" />
+      <workItem from="1655690420482" duration="1853000" />
+      <workItem from="1655706459272" duration="29608000" />
     </task>
     <task id="LOCAL-00001" summary="完成功能界面设计 后台代码基本框架完成">
       <created>1655620692666</created>
@@ -159,7 +167,14 @@
       <option name="project" value="LOCAL" />
       <updated>1655653071715</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="pom爆红修改">
+      <created>1655655218527</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1655655218527</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -184,6 +199,7 @@
     </ignored-roots>
     <MESSAGE value="完成功能界面设计 后台代码基本框架完成" />
     <MESSAGE value="完成学生查看志愿信息和导师查看意向学生" />
-    <option name="LAST_COMMIT_MESSAGE" value="完成学生查看志愿信息和导师查看意向学生" />
+    <MESSAGE value="pom爆红修改" />
+    <option name="LAST_COMMIT_MESSAGE" value="pom爆红修改" />
   </component>
 </project>
