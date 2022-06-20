@@ -194,6 +194,7 @@ export default {
         }
       })
       location. reload()
+      alert("修改成功")
       // this.load()
 
 
