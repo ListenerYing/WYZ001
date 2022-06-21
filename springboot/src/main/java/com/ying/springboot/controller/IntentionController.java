@@ -74,6 +74,7 @@ public class IntentionController {
         QueryWrapper<Intention> queryWrapper=new QueryWrapper<>();
         queryWrapper.orderByAsc("sequence");
                 queryWrapper.eq("student_id",id);
+
         Page<Intention> page=intentionService.page(new Page<>(pageNum,pageSize),queryWrapper);
 
                 List<Intention> records=page.getRecords();
@@ -112,21 +113,21 @@ public class IntentionController {
 
         }
         //根据学生id和志愿顺序修改,
-        @PostMapping("/change/{id}/{sequence}")
-        public Result sequenceChange(@PathVariable Integer id,
-                                    @PathVariable  Integer sequence){
-
-                UpdateWrapper<Intention> updateWrapper=new UpdateWrapper<>();
-                updateWrapper.orderByAsc("sequence");
-                updateWrapper.eq("student_id",id)
-                        .eq("sequence",sequence-1)
-                        .or()
-                        .eq("student_id",id)
-                        .eq("sequence",sequence);
-                updateWrapper.set("sequence",sequence);
-                return Result.success(intentionService.update(null, updateWrapper));
-
-        }
+//        @PostMapping("/change/{id}/{sequence}")
+//        public Result sequenceChange(@PathVariable Integer id,
+//                                    @PathVariable  Integer sequence){
+//
+//                UpdateWrapper<Intention> updateWrapper=new UpdateWrapper<>();
+//                updateWrapper.orderByAsc("sequence");
+//                updateWrapper.eq("student_id",id)
+//                        .eq("sequence",sequence-1)
+//                        .or()
+//                        .eq("student_id",id)
+//                        .eq("sequence",sequence);
+//                updateWrapper.set("sequence",sequence);
+//                return Result.success(intentionService.update(null, updateWrapper));
+//
+//        }
 
 
 

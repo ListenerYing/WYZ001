@@ -59,7 +59,7 @@
               icon="el-icon-info"
               icon-color="#67C23A"
               title="确定不要这位学生嘛？"
-              @confirm="     (scope.row.id)"
+              @confirm="del(scope.row.id)"
 
           >
             <el-button type="danger" icon="el-icon-delete-solid" slot="reference" style="margin-left: 5px" >不要</el-button>
@@ -200,7 +200,7 @@ export default {
       // this.dialogFormVisible=true
     },
     del(id){
-      this.request.delete("/user/"+id).then(res=>{
+      this.request.delete("/intention/"+id).then(res=>{
         if(res.data){
           this.$message.success("删除成功")
           this.load()

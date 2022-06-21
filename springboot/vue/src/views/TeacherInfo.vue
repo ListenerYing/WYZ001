@@ -48,7 +48,7 @@
               icon="el-icon-info"
               icon-color="#67C23A"
               title="确定选择这位导师嘛？"
-              @confirm="addItention() "
+              @confirm="addIntention()"
 
           >
             <el-button type="success" icon="el-icon-check" slot="reference" style="margin-left: 5px" v-if="user.role==='学生'">选择</el-button>
@@ -119,7 +119,7 @@ export default {
       requirement:"",
       introduction:"",
 
-
+      intention:{},
       user:localStorage.getItem("user") ? JSON.parse(localStorage.getItem("user")) : {}
 
     }
@@ -131,6 +131,16 @@ export default {
   },
   methods:{
     load() {
+      // this.request.post("/user/login", this.user).then(res => {
+      //   if(res.code==='200') {
+      //     localStorage.setItem("user",JSON.stringify(res.data))//存储用户信息到浏览器
+      //     this.$router.push("/")
+      //     this.$message.success("登录成功")
+      //   } else {
+      //     this.$message.error(res.msg)
+      //   }
+      // },
+
       this.request.get("/user/page/teacher",{
         params:{
           pageNum:this.pageNum,
@@ -175,6 +185,19 @@ export default {
       )
       // this.form=Object.assign({},row)
       // this.dialogFormVisible=true
+    },
+    //选择导师，添加志愿
+    addIntention(){
+      this.request.post("/intention",this.intention).then(res=> {
+        if(res.data){
+          this.$message.success("添加志愿成功")
+
+          this.load()
+        }else {
+          this.$message.error("选择失败！")
+        }
+      })
+
     },
     del(id){
       this.request.delete("/user/"+id).then(res=>{

@@ -16,6 +16,18 @@ CREATE DATABASE /*!32312 IF NOT EXISTS*/`wyz` /*!40100 DEFAULT CHARACTER SET utf
 
 USE `wyz`;
 
+/*Table structure for table `endtime` */
+
+DROP TABLE IF EXISTS `endtime`;
+
+CREATE TABLE `endtime` (
+  `id` int NOT NULL,
+  `endtime` timestamp NULL DEFAULT NULL COMMENT '截至时间',
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+
+/*Data for the table `endtime` */
+
 /*Table structure for table `intention` */
 
 DROP TABLE IF EXISTS `intention`;
@@ -24,17 +36,20 @@ CREATE TABLE `intention` (
   `id` int NOT NULL AUTO_INCREMENT,
   `student_id` int NOT NULL,
   `teacher_id` int NOT NULL,
-  `order` int DEFAULT NULL COMMENT '志愿顺序',
+  `sequence` int DEFAULT '1' COMMENT '志愿顺序',
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=5 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=9 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 /*Data for the table `intention` */
 
-insert  into `intention`(`id`,`student_id`,`teacher_id`,`order`) values 
-(1,2,5,1),
-(2,2,6,2),
-(3,2,7,3),
-(4,3,8,1);
+insert  into `intention`(`id`,`student_id`,`teacher_id`,`sequence`) values 
+(1,2,5,3),
+(2,2,7,1),
+(3,2,8,2),
+(4,2,6,4),
+(5,3,6,3),
+(6,3,5,1),
+(7,3,7,2);
 
 /*Table structure for table `student` */
 
@@ -52,17 +67,16 @@ CREATE TABLE `student` (
 /*Data for the table `student` */
 
 insert  into `student`(`id`,`gpa`,`introduction`,`teacher_id`) values 
-(2,'1','但我想把过去',0),
-(3,'3','自我介绍很累',0),
+(2,'1','但我想把过去介绍给你看',0),
+(3,'4','asdfasdf',0),
 (4,'2',NULL,0),
-(5,'3','之崛起而读书',0),
 (9,'4',NULL,0),
 (10,'3','我的时间很宝贵',0),
 (11,'5',NULL,0),
 (12,'2',NULL,0),
 (13,'2',NULL,0),
 (14,'2',NULL,0),
-(15,'2',NULL,0);
+(15,'3','之崛起而读书',0);
 
 /*Table structure for table `sys_user` */
 
@@ -91,7 +105,7 @@ insert  into `sys_user`(`id`,`username`,`password`,`nickname`,`email`,`phone`,`a
 (4,'吴彦祖','123','吴彦祖','129489281354','14234','41234123','2022-06-18 03:00:00',NULL,'学生'),
 (5,'周恩来','123','周恩来','124474663@qq.com','请问切勿','中山','2022-06-18 03:06:50',NULL,'老师'),
 (6,'毛泽东','123','毛泽东','12343','12341','41234123412','2022-06-18 05:34:55',NULL,'老师'),
-(7,'陈独秀','123','陈独秀',NULL,NULL,NULL,'2022-06-18 03:03:18',NULL,'老师'),
+(7,'陈独秀','123','陈独秀','412315','123','还是发货地阿苏','2022-06-18 03:03:18',NULL,'老师'),
 (8,'方向','123456','向儿','845723458@qq.com','164723748932','浙江省某某时','2022-05-10 11:41:59',NULL,'老师'),
 (9,'温庭筠','123456','雯雯','71364781@qq.com','889238499','绍兴市','2022-05-10 11:42:58',NULL,'学生'),
 (10,'李白','123456','诗仙','1839278@qq.com','920920920','青莲城','2022-05-10 11:44:37',NULL,'学生'),
@@ -119,6 +133,7 @@ CREATE TABLE `teacher` (
 /*Data for the table `teacher` */
 
 insert  into `teacher`(`id`,`title`,`enrollment`,`enrolled`,`requirement`,`introduction`) values 
+(2,NULL,NULL,0,NULL,'但我想把过去介绍给你看'),
 (5,'副教授',996,0,'为中华','之崛起而读书'),
 (6,'讲师',2,0,'巴拉巴拉','自我介绍很累'),
 (7,'教授',7,0,'大楚兴','陈胜王'),
