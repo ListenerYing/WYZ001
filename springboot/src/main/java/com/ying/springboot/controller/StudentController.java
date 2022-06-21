@@ -45,6 +45,16 @@ public class StudentController {
         public Result deleteBatch(@RequestBody List<Integer> ids) {
         return Result.success(studentService.removeByIds(ids));
         }
+        //将id为id的学生的老师id字段设为tid
+        @GetMapping("/saveTeacherId/{id}")
+        public Result saveTeacherId(@RequestParam Integer id,
+                                    @RequestParam Integer tid) {
+                Student student=new Student();
+                student.setId(id);
+                student.setTeacherId(tid);
+
+                return Result.success(studentService.updateById(student));
+        }
         //分页查询
         @GetMapping("/page")
         public Result findPage(@RequestParam Integer pageNum,

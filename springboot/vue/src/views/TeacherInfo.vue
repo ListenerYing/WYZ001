@@ -48,7 +48,7 @@
               icon="el-icon-info"
               icon-color="#67C23A"
               title="确定选择这位导师嘛？"
-              @confirm=" "
+              @confirm="addItention() "
 
           >
             <el-button type="success" icon="el-icon-check" slot="reference" style="margin-left: 5px" v-if="user.role==='学生'">选择</el-button>

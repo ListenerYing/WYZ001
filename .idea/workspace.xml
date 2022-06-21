@@ -5,7 +5,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="64e422a5-1b65-454a-8710-985bea71f75a" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/springboot/vue/src/views/Intention.vue" beforeDir="false" afterPath="$PROJECT_DIR$/springboot/vue/src/views/Intention.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/springboot/src/main/java/com/ying/springboot/controller/StudentController.java" beforeDir="false" afterPath="$PROJECT_DIR$/springboot/src/main/java/com/ying/springboot/controller/StudentController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/springboot/vue/src/views/StudentInfo.vue" beforeDir="false" afterPath="$PROJECT_DIR$/springboot/vue/src/views/StudentInfo.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/springboot/vue/src/views/TeacherInfo.vue" beforeDir="false" afterPath="$PROJECT_DIR$/springboot/vue/src/views/TeacherInfo.vue" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -138,7 +141,9 @@
       <workItem from="1655632568458" duration="13329000" />
       <workItem from="1655686849923" duration="531000" />
       <workItem from="1655690420482" duration="1853000" />
-      <workItem from="1655706459272" duration="29863000" />
+      <workItem from="1655706459272" duration="30103000" />
+      <workItem from="1655775499094" duration="756000" />
+      <workItem from="1655776287617" duration="6449000" />
     </task>
     <task id="LOCAL-00001" summary="完成功能界面设计 后台代码基本框架完成">
       <created>1655620692666</created>
@@ -175,7 +180,14 @@
       <option name="project" value="LOCAL" />
       <updated>1655740197022</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="完成顺序志愿">
+      <created>1655740288165</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1655740288165</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
