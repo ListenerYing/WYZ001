@@ -128,6 +128,27 @@ public class IntentionController {
 //                return Result.success(intentionService.update(null, updateWrapper));
 //
 //        }
+        //志愿前移
+        @GetMapping("/push/{id}")
+        public Result sequencePush(@PathVariable Integer id){
+                Intention in=new Intention();
+                Intention intention=intentionService.getById(id);
+                Integer sid=intention.getStudentId();
+                Integer seq=intention.getSequence();
+                UpdateWrapper<Intention> updateWrapper=new UpdateWrapper<>();
+                updateWrapper.orderByAsc("sequence");
+                updateWrapper.eq("student_id",sid)
+                        .gt("sequence",seq);
+                in.setTeacherId(intention.getTeacherId());
+                in.setStudentId(sid);
+                in.setSequence(seq);
+
+
+
+
+
+                return Result.success(intentionService.update(in, updateWrapper));
+        }
 
 
 
