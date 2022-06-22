@@ -10,6 +10,7 @@ import com.ying.springboot.common.Result;
 import com.ying.springboot.entity.User;
 import com.ying.springboot.mapper.IntentionMapper;
 import com.ying.springboot.service.UserService;
+import io.swagger.models.auth.In;
 import org.springframework.transaction.annotation.Isolation;
 import org.springframework.transaction.annotation.Transactional;
 import org.springframework.web.bind.annotation.*;
@@ -87,6 +88,28 @@ public class IntentionController {
         return Result.success(records);
 
         }
+        //添加志愿
+        @GetMapping("/addIntention")
+        public Result addIntention(@RequestParam Integer student_id,
+                                   @RequestParam Integer teacher_id){
+                QueryWrapper<Intention> queryWrapper=new QueryWrapper<>();
+                queryWrapper.eq("student_id",student_id);
+                List<Intention> intentionList=intentionService.list(queryWrapper);
+
+                Intention intention=new Intention();
+                intention.setStudentId(student_id);
+                intention.setTeacherId(teacher_id);
+                intention.setSequence(intentionList.size()+1);
+
+
+
+
+
+                return Result.success(intentionService.save(intention));
+
+
+        }
+
         //根据学生id和志愿顺序修改,把小的加1
         @GetMapping("/plus")
         public Result sequencePlus(@RequestParam Integer studentId,

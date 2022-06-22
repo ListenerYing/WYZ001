@@ -48,7 +48,7 @@
               icon="el-icon-info"
               icon-color="#67C23A"
               title="确定选择这位导师嘛？"
-              @confirm="addIntention()"
+              @confirm="addIntention(scope.row.id)"
 
           >
             <el-button type="success" icon="el-icon-check" slot="reference" style="margin-left: 5px" v-if="user.role==='学生'">选择</el-button>
@@ -187,8 +187,14 @@ export default {
       // this.dialogFormVisible=true
     },
     //选择导师，添加志愿
-    addIntention(){
-      this.request.post("/intention",this.intention).then(res=> {
+    addIntention(teacher_id){
+      this.request.get("/intention/addIntention",{
+        params:{
+          student_id:this.user.id,
+          teacher_id:teacher_id
+
+        }
+      }).then(res=> {
         if(res.data){
           this.$message.success("添加志愿成功")
 
