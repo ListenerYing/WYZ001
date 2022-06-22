@@ -119,20 +119,25 @@ public class IntentionController {
                 updateWrapper.eq("student_id",studentId)
                         .eq("sequence",sequence-1);
                 updateWrapper.set("sequence",sequence);
-                return Result.success(intentionService.update(null, updateWrapper));
+                return Result.success();
 
         }
         //根据id修改志愿顺序,把大的减小1
-        @GetMapping("/reduce")
+        @GetMapping("/intentionUp")
         public Result sequenceReduce(@RequestParam Integer id,
-                                     @RequestParam Integer sequence) throws InterruptedException {
-//                TimeUnit.SECONDS.sleep(1);
-                UpdateWrapper<Intention> updateWrapper=new UpdateWrapper<>();
-                updateWrapper.eq("id",id);
+                                     @RequestParam Integer studentId,
+                                     @RequestParam Integer sequence) {
+                UpdateWrapper<Intention> plusWrapper=new UpdateWrapper<>();
+                plusWrapper.eq("student_id",studentId)
+                        .eq("sequence",sequence-1);
+                plusWrapper.set("sequence",sequence);
+                intentionService.update(null, plusWrapper);
+                UpdateWrapper<Intention> reduceWrapper=new UpdateWrapper<>();
+                reduceWrapper.eq("id",id);
 
-                updateWrapper.set("sequence",sequence-1);
+                reduceWrapper.set("sequence",sequence-1);
 
-                return Result.success(intentionService.update(null, updateWrapper));
+                return Result.success(intentionService.update(null, reduceWrapper));
 
         }
         //根据学生id和志愿顺序修改,

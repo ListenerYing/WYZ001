@@ -36,6 +36,9 @@
       <el-form-item label="自我介绍">
         <el-input type="textarea" v-model="extra.introduction" autocomplete="off" autosize></el-input>
       </el-form-item>
+      <el-form-item label="导师id">
+        <el-input v-model="extra.teacherId" disabled autocomplete="off"></el-input>
+      </el-form-item>
       <el-form-item>
         <el-button type="primary" @click="save">确 定</el-button>
       </el-form-item>

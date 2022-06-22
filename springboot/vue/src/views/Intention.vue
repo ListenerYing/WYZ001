@@ -168,34 +168,22 @@ export default {
 
     //处理志愿顺序 存在bug 暂未解决 2022/6/20
     handleUp(id,sequence,studentId){
-      this.request.get("/intention/plus",{
+      this.request.get("/intention/intentionUp",{
         params:{
+          id:id,
           studentId:studentId,
           sequence:sequence,
         }
       }).then(res=>{
         if(res.data){
-         this.$message("+1成功")
+          this.$message("上移成功")
         }else {
-          this.$message.error("+1失败")
+          this.$message.error("上移失败")
         }
       })
+      // location. reload()
 
-      this.request.get("/intention/reduce",{
-        params:{
-          id:id,
-          sequence:sequence,
-        }
-      }).then(res=>{
-        if(res.data){
-          this.$message("-1成功")
-        }else {
-          this.$message.error("-1失败")
-        }
-      })
-      location. reload()
-      alert("修改成功")
-      // this.load()
+      this.load()
 
 
 
