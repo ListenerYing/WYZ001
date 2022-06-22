@@ -200,15 +200,18 @@ export default {
       // this.dialogFormVisible=true
     },
     del(id){
-      this.request.delete("/intention/"+id).then(res=>{
+
+      this.request.get("/intention/push/"+id).then(res=>{
         if(res.data){
-          this.$message.success("删除成功")
+          this.$message.success("PUSH成功")
           this.load()
         }else {
-          this.$message.error("删除失败！")
+          this.$message.error("PUSH失败！")
         }
 
       })
+
+
     },
     handleSelectionChange(val){
       console.log(val)
