@@ -23,7 +23,8 @@
       <i class="el-icon-user"></i>
       <span slot="title">导师信息</span>
     </el-menu-item>
-    <el-menu-item index="/intention">
+
+    <el-menu-item index="/intention" >
       <i class="el-icon-reading"></i>
       <span slot="title">志愿信息</span>
     </el-menu-item>

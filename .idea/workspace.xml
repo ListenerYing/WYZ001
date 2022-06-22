@@ -6,8 +6,8 @@
   <component name="ChangeListManager">
     <list default="true" id="64e422a5-1b65-454a-8710-985bea71f75a" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/springboot/src/main/java/com/ying/springboot/controller/IntentionController.java" beforeDir="false" afterPath="$PROJECT_DIR$/springboot/src/main/java/com/ying/springboot/controller/IntentionController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/springboot/vue/src/views/TeacherInfo.vue" beforeDir="false" afterPath="$PROJECT_DIR$/springboot/vue/src/views/TeacherInfo.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/springboot/vue/src/components/Aside.vue" beforeDir="false" afterPath="$PROJECT_DIR$/springboot/vue/src/components/Aside.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/springboot/vue/src/views/StudentInfo.vue" beforeDir="false" afterPath="$PROJECT_DIR$/springboot/vue/src/views/StudentInfo.vue" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -71,7 +71,7 @@
       <recent name="D:\AHub\VUE001\springboot\vue\src\assets" />
     </key>
   </component>
-  <component name="RunManager" selected="Spring Boot.SpringbootApplication">
+  <component name="RunManager" selected="npm.serve">
     <configuration name="CodeGenerator" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="com.ying.springboot.utils.CodeGenerator" />
       <module name="com.ying.springboot" />
@@ -149,7 +149,7 @@
       <workItem from="1655806294094" duration="1089000" />
       <workItem from="1655825705735" duration="839000" />
       <workItem from="1655857489948" duration="6187000" />
-      <workItem from="1655881532057" duration="4846000" />
+      <workItem from="1655881532057" duration="7220000" />
     </task>
     <task id="LOCAL-00001" summary="完成功能界面设计 后台代码基本框架完成">
       <created>1655620692666</created>
@@ -221,7 +221,14 @@
       <option name="project" value="LOCAL" />
       <updated>1655866356599</updated>
     </task>
-    <option name="localTasksCounter" value="11" />
+    <task id="LOCAL-00011" summary="完成学生新增志愿">
+      <created>1655887152463</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1655887152463</updated>
+    </task>
+    <option name="localTasksCounter" value="12" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -252,6 +259,7 @@
     <MESSAGE value="数据库同步&#10;完成选择功能" />
     <MESSAGE value="fortest" />
     <MESSAGE value="完成志愿推送" />
-    <option name="LAST_COMMIT_MESSAGE" value="完成志愿推送" />
+    <MESSAGE value="完成学生新增志愿" />
+    <option name="LAST_COMMIT_MESSAGE" value="完成学生新增志愿" />
   </component>
 </project>
