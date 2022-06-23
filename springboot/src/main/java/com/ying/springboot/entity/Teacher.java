@@ -30,8 +30,7 @@ public class Teacher implements Serializable {
     @ApiModelProperty("招生人数")
     private Integer enrollment;
 
-    @ApiModelProperty("已有学生人数")
-    private Integer enrolled;
+
 
     @ApiModelProperty("要求")
     private String requirement;

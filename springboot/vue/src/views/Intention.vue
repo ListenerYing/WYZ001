@@ -66,10 +66,10 @@
           <el-input v-model="form.enrollment" auto-complete="off"></el-input>
         </el-form-item>
         <el-form-item label="要求">
-          <el-input v-model="form.requirement" auto-complete="off"></el-input>
+          <el-input type="textarea" v-model="form.requirement" auto-complete="off" autosize></el-input>
         </el-form-item>
         <el-form-item label="自我介绍">
-          <el-input v-model="form.introduction" auto-complete="off"></el-input>
+          <el-input type="textarea" v-model="form.introduction" auto-complete="off" autosize></el-input>
         </el-form-item>
 
       </el-form>
@@ -166,7 +166,7 @@ export default {
       // this.dialogFormVisible=true
     },
 
-    //处理志愿顺序 存在bug 暂未解决 2022/6/20
+    //处理志愿顺序
     handleUp(id,sequence,studentId){
       this.request.get("/intention/intentionUp",{
         params:{

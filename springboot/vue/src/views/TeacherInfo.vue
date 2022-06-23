@@ -80,10 +80,10 @@
           <el-input v-model="form.enrollment" auto-complete="off"></el-input>
         </el-form-item>
         <el-form-item label="要求">
-          <el-input v-model="form.requirement" auto-complete="off"></el-input>
+          <el-input  type="textarea" v-model="form.requirement" auto-complete="off" autosize></el-input>
         </el-form-item>
         <el-form-item label="自我介绍">
-          <el-input v-model="form.introduction" auto-complete="off"></el-input>
+          <el-input type="textarea" v-model="form.introduction" auto-complete="off" autosize></el-input>
         </el-form-item>
 
       </el-form>
