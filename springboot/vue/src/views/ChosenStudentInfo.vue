@@ -30,28 +30,7 @@
       <el-table-column label="操作" width="300" align="center">
         <template slot-scope="scope">
           <el-button type="info"  @click="handleDetail(scope.row.id)">查看详情</el-button>
-          <el-popconfirm
-              confirm-button-text='确定'
-              cancel-button-text='我再想想'
-              icon="el-icon-info"
-              icon-color="#67C23A"
-              title="确定选择这位学生嘛？"
-              @confirm="handleChoose(scope.row.id)"
 
-          >
-            <el-button type="success" icon="el-icon-check" slot="reference" style="margin-left: 5px" >选择</el-button>
-          </el-popconfirm>
-          <el-popconfirm
-              confirm-button-text='确定'
-              cancel-button-text='我再想想'
-              icon="el-icon-info"
-              icon-color="#67C23A"
-              title="确定不要这位学生嘛？"
-              @confirm="del(scope.row.id)"
-
-          >
-            <el-button type="danger" icon="el-icon-delete-solid" slot="reference" style="margin-left: 5px" >不要</el-button>
-          </el-popconfirm>
         </template>
       </el-table-column>
     </el-table>
@@ -94,7 +73,7 @@
 <script>
 
 export default {
-  name: "StudentInfo.vue",
+  name: "ChosenStudentInfo.vue",
   data(){
     return{
       tableData: [],
@@ -123,7 +102,7 @@ export default {
   },
   methods:{
     load() {
-      this.request.get("/user/page/student",{
+      this.request.get("/user/page/ChosenStudent",{
         params:{
           id:this.user.id,
           pageNum:this.pageNum,
@@ -242,4 +221,3 @@ export default {
 <style scoped>
 
 </style>
-

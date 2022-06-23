@@ -127,6 +127,22 @@ public class UserController {
         return Result.success(userService.page(page,queryWrapper));
 
     }
+    //分页查询已选学生
+    @GetMapping("/page/ChosenStudent")
+    public Result findChosenStudent(@RequestParam Integer pageNum,
+                              @RequestParam Integer pageSize,
+                              @RequestParam (defaultValue="") Integer id
+
+    ){
+
+        IPage<User> page=new Page<>(pageNum,pageSize);
+        QueryWrapper<User> queryWrapper=new QueryWrapper<>();
+        queryWrapper.inSql("id","SELECT id FROM student WHERE teacher_id="+id);
+
+
+        return Result.success(userService.page(page,queryWrapper));
+
+    }
     //分页查询志愿老师
     @GetMapping("/page/findSelectedTeacher")
     public Result findSelectedTeacher(@RequestParam Integer pageNum,

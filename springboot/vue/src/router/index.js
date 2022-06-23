@@ -15,7 +15,7 @@ const routes = [
       { path: 'teacherInfo', name: '导师信息', component: () => import('../views/TeacherInfo.vue')},
       { path: 'intention', name: '志愿信息', component: () => import('../views/Intention.vue')},
       { path: 'studentInfo', name: '查看报名', component: () => import('../views/StudentInfo.vue')},
-
+      { path: 'ChosenStudentInfo', name: '查看已选', component: () => import('../views/ChosenStudentInfo')},
       {
         path: 'im',
         name: 'Im',

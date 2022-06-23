@@ -41,7 +41,7 @@
                 <i class="el-icon-search"></i>
                 <span slot="title">查看报名</span>
               </el-menu-item>
-              <el-menu-item index="/intention">
+              <el-menu-item index="/ChosenStudentInfo">
                 <i class="el-icon-search"></i>
                 <span slot="title">查看已选</span>
               </el-menu-item>
