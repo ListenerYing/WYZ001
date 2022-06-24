@@ -26,8 +26,8 @@
       <el-form-item label="地址">
         <el-input type="textarea" v-model="form.address" autocomplete="off" autosize></el-input>
       </el-form-item>
-      <el-form-item label="招生人数" v-if="user.role==='老师'" >
-        <el-input v-model="extra.enrollment" autocomplete="off"></el-input>
+      <el-form-item label="招生人数" v-if="user.role==='老师'" prop="enrollment">
+        <el-input-number v-model="extra.enrollment" autocomplete="off" :min="1" :max="9"></el-input-number>
       </el-form-item>
 
       <el-form-item label="要求"  v-if="user.role==='老师'">
@@ -36,7 +36,7 @@
       <el-form-item label="自我介绍">
         <el-input type="textarea" v-model="extra.introduction" autocomplete="off" autosize></el-input>
       </el-form-item>
-      <el-form-item label="导师id">
+      <el-form-item label="导师id" v-if="user.role==='学生'">
         <el-input v-model="extra.teacherId" disabled autocomplete="off"></el-input>
       </el-form-item>
       <el-form-item>
@@ -70,26 +70,27 @@ export default {
     async getUser() {
       return (await this.request.get("/user/" + this.user.id)).data
     },
-    getUserInfo(id,role){
-      if(role==="老师"){
-        this.request.get("/teacher/"+id).then(res=>{
-          if(res.data){
-            this.extra=Object.assign({},res.data)
-          }else {
-            this.$message.error("There is something wrong!")
-          }
-        }
-      )
-
-      }
-      else if(role==="学生"){this.request.get("/student/"+id).then(res=>{
-            if(res.data){
-              this.extra=Object.assign({},res.data)
-            }else {
-              this.$message.error("There is something wrong!")
+    getUserInfo(id, role) {
+      if (role === "老师") {
+        this.request.get("/teacher/" + id).then(res => {
+              if (res.data) {
+                this.extra = Object.assign({}, res.data)
+              } else {
+                this.$message.error("There is something wrong!")
+              }
             }
-          }
-      )}
+        )
+
+      } else if (role === "学生") {
+        this.request.get("/student/" + id).then(res => {
+              if (res.data) {
+                this.extra = Object.assign({}, res.data)
+              } else {
+                this.$message.error("There is something wrong!")
+              }
+            }
+        )
+      }
     },
     save() {
       this.request.post("/user", this.form).then(res => {
@@ -115,7 +116,8 @@ export default {
     },
     handleAvatarSuccess(res) {
       this.form.avatarUrl = res
-    }
+    },
+
   }
 }
 </script>
