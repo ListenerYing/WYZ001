@@ -6,8 +6,7 @@
   <component name="ChangeListManager">
     <list default="true" id="64e422a5-1b65-454a-8710-985bea71f75a" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/springboot/vue/src/views/Login.vue" beforeDir="false" afterPath="$PROJECT_DIR$/springboot/vue/src/views/Login.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/springboot/vue/src/views/Person.vue" beforeDir="false" afterPath="$PROJECT_DIR$/springboot/vue/src/views/Person.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/springboot/vue/src/components/Aside.vue" beforeDir="false" afterPath="$PROJECT_DIR$/springboot/vue/src/components/Aside.vue" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -71,7 +70,7 @@
       <recent name="D:\AHub\VUE001\springboot\vue\src\assets" />
     </key>
   </component>
-  <component name="RunManager" selected="npm.serve">
+  <component name="RunManager" selected="Spring Boot.SpringbootApplication">
     <configuration name="CodeGenerator" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="com.ying.springboot.utils.CodeGenerator" />
       <module name="com.ying.springboot" />
@@ -156,7 +155,8 @@
       <workItem from="1655993954715" duration="1150000" />
       <workItem from="1656042025723" duration="988000" />
       <workItem from="1656054822921" duration="1239000" />
-      <workItem from="1656065936136" duration="4030000" />
+      <workItem from="1656065936136" duration="4252000" />
+      <workItem from="1656127560283" duration="4078000" />
     </task>
     <task id="LOCAL-00001" summary="完成功能界面设计 后台代码基本框架完成">
       <created>1655620692666</created>
@@ -263,7 +263,14 @@
       <option name="project" value="LOCAL" />
       <updated>1655982943109</updated>
     </task>
-    <option name="localTasksCounter" value="16" />
+    <task id="LOCAL-00016" summary="限制招生人数">
+      <created>1656070076245</created>
+      <option name="number" value="00016" />
+      <option name="presentableId" value="LOCAL-00016" />
+      <option name="project" value="LOCAL" />
+      <updated>1656070076245</updated>
+    </task>
+    <option name="localTasksCounter" value="17" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -299,6 +306,7 @@
     <MESSAGE value="解决上移bug" />
     <MESSAGE value="信息显示不全修复" />
     <MESSAGE value="查看已选完成" />
-    <option name="LAST_COMMIT_MESSAGE" value="查看已选完成" />
+    <MESSAGE value="限制招生人数" />
+    <option name="LAST_COMMIT_MESSAGE" value="限制招生人数" />
   </component>
 </project>

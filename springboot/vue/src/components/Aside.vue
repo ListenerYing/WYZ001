@@ -25,27 +25,31 @@
         <i class="el-icon-user"></i>
         <span slot="title">导师信息</span>
       </el-menu-item>
+        <div v-if="this.user.role==='学生'">
+          <el-menu-item index="/intention" >
+            <i class="el-icon-reading"></i>
+            <span slot="title">志愿信息</span>
+          </el-menu-item>
+        </div>
 
-      <el-menu-item index="/intention" >
-        <i class="el-icon-reading"></i>
-        <span slot="title">志愿信息</span>
-      </el-menu-item>
+      <div v-if="this.user.role==='老师'">
+        <el-submenu index="teacherPower" >
+          <template slot="title">
+            <i class="el-icon-menu"></i>
+            <span slot="title">教师功能</span>
+          </template>
+          <el-menu-item index="/studentInfo">
+            <i class="el-icon-search"></i>
+            <span slot="title">查看报名</span>
+          </el-menu-item>
+          <el-menu-item index="/ChosenStudentInfo">
+            <i class="el-icon-search"></i>
+            <span slot="title">查看已选</span>
+          </el-menu-item>
+        </el-submenu >
+      </div>
 
 
-            <el-submenu index="2" >
-              <template slot="title">
-                <i class="el-icon-menu"></i>
-                <span slot="title">教师功能</span>
-              </template>
-              <el-menu-item index="/studentInfo">
-                <i class="el-icon-search"></i>
-                <span slot="title">查看报名</span>
-              </el-menu-item>
-              <el-menu-item index="/ChosenStudentInfo">
-                <i class="el-icon-search"></i>
-                <span slot="title">查看已选</span>
-              </el-menu-item>
-            </el-submenu >
 
 
 
@@ -71,6 +75,11 @@ export default {
   props: {
     isCollapse: Boolean,
     logoTextShow: Boolean
+  },
+  data(){
+    return{
+      user:localStorage.getItem("user") ? JSON.parse(localStorage.getItem("user")) : {}
+    }
   }
 }
 </script>
