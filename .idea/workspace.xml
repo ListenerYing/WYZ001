@@ -5,10 +5,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="64e422a5-1b65-454a-8710-985bea71f75a" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/springboot/vue/src/views/Progress.vue" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/springboot/vue/src/components/Aside.vue" beforeDir="false" afterPath="$PROJECT_DIR$/springboot/vue/src/components/Aside.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/springboot/vue/src/router/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/springboot/vue/src/router/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/springboot/doc/wyz.sql" beforeDir="false" afterPath="$PROJECT_DIR$/springboot/doc/wyz.sql" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -159,7 +157,7 @@
       <workItem from="1656054822921" duration="1239000" />
       <workItem from="1656065936136" duration="4252000" />
       <workItem from="1656127560283" duration="4720000" />
-      <workItem from="1656220541624" duration="10916000" />
+      <workItem from="1656220541624" duration="11774000" />
     </task>
     <task id="LOCAL-00001" summary="完成功能界面设计 后台代码基本框架完成">
       <created>1655620692666</created>
@@ -280,7 +278,21 @@
       <option name="project" value="LOCAL" />
       <updated>1656133056706</updated>
     </task>
-    <option name="localTasksCounter" value="18" />
+    <task id="LOCAL-00018" summary="进度流程（只做展示）">
+      <created>1656243327423</created>
+      <option name="number" value="00018" />
+      <option name="presentableId" value="LOCAL-00018" />
+      <option name="project" value="LOCAL" />
+      <updated>1656243327424</updated>
+    </task>
+    <task id="LOCAL-00019" summary="进度流程（只做展示）">
+      <created>1656243404329</created>
+      <option name="number" value="00019" />
+      <option name="presentableId" value="LOCAL-00019" />
+      <option name="project" value="LOCAL" />
+      <updated>1656243404329</updated>
+    </task>
+    <option name="localTasksCounter" value="20" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -318,6 +330,7 @@
     <MESSAGE value="查看已选完成" />
     <MESSAGE value="限制招生人数" />
     <MESSAGE value="前端美化" />
-    <option name="LAST_COMMIT_MESSAGE" value="前端美化" />
+    <MESSAGE value="进度流程（只做展示）" />
+    <option name="LAST_COMMIT_MESSAGE" value="进度流程（只做展示）" />
   </component>
 </project>
