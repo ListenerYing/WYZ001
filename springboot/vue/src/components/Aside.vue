@@ -64,7 +64,12 @@
           <i class="el-icon-s-custom"></i>
           <span slot="title">用户管理</span>
         </el-menu-item>
+
       </el-submenu>
+      <el-menu-item index="/progress">
+        <i class="el-icon-time"></i>
+        <span slot="title">查看进度</span>
+      </el-menu-item>
     </div>
   </el-menu>
 </template>
