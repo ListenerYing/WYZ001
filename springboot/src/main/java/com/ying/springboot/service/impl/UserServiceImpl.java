@@ -3,6 +3,8 @@ package com.ying.springboot.service.impl;
 import cn.hutool.core.bean.BeanUtil;
 import cn.hutool.log.Log;
 import com.baomidou.mybatisplus.core.conditions.query.QueryWrapper;
+import com.baomidou.mybatisplus.core.metadata.IPage;
+import com.baomidou.mybatisplus.extension.plugins.pagination.Page;
 import com.baomidou.mybatisplus.extension.service.impl.ServiceImpl;
 import com.ying.springboot.common.Constants;
 import com.ying.springboot.controller.dto.UserDTO;
@@ -10,10 +12,15 @@ import com.ying.springboot.ecxeption.ServiceException;
 import com.ying.springboot.entity.User;
 import com.ying.springboot.mapper.UserMapper;
 import com.ying.springboot.service.UserService;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
+
+import javax.annotation.Resource;
 
 @Service
 public class UserServiceImpl extends ServiceImpl<UserMapper, User> implements UserService {
+        @Resource
+        private UserMapper userMapper;
 
     private static final Log LOG= Log.get();
     @Override
@@ -60,4 +67,9 @@ public class UserServiceImpl extends ServiceImpl<UserMapper, User> implements Us
         return one;
     }
 
+
+    @Override
+    public IPage<User> getResult(Page<User> page) {
+        return userMapper.getResult(page);
+    }
 }

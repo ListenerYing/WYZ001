@@ -159,6 +159,25 @@ public class UserController {
         return Result.success(userService.page(page,queryWrapper));
 
     }
+    //分页查询结果
+    @GetMapping("/page/result")
+    public Result getResult(@RequestParam Integer pageNum,
+                                      @RequestParam Integer pageSize
+
+    ){
+
+        IPage<User> page=userService.getResult(new Page<>(pageNum,pageSize));
+//        QueryWrapper<User> queryWrapper=new QueryWrapper<>();
+//        queryWrapper.eq("role","学生");
+//        List<User> stu=userService.list(queryWrapper);
+//        for (User stu:stu){
+//            User user =userService.getById(stu.get)
+//        }
+//
+//
+        return Result.success(page);
+
+    }
 
 
 

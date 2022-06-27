@@ -17,6 +17,7 @@ const routes = [
       { path: 'studentInfo', name: '查看报名', component: () => import('../views/StudentInfo.vue')},
       { path: 'ChosenStudentInfo', name: '查看已选', component: () => import('../views/ChosenStudentInfo')},
       { path: 'progress', name: '查看进度', component: () => import('../views/Progress')},
+      { path: 'result', name: '结果公示', component: () => import('../views/Result')},
       {
         path: 'im',
         name: 'Im',

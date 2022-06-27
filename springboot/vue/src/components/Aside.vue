@@ -70,6 +70,10 @@
         <i class="el-icon-time"></i>
         <span slot="title">查看进度</span>
       </el-menu-item>
+      <el-menu-item index="/result">
+        <i class="el-icon-data-board"></i>
+        <span slot="title">结果公示</span>
+      </el-menu-item>
     </div>
   </el-menu>
 </template>

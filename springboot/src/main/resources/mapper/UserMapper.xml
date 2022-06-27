@@ -3,4 +3,7 @@
 <mapper namespace="com.ying.springboot.mapper.UserMapper">
 
 
+    <select id="getResult" resultType="com.ying.springboot.controller.dto.ResDTO">
+        select * from wyz.result
+    </select>
 </mapper>

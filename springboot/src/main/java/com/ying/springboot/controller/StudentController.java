@@ -5,7 +5,9 @@ import com.baomidou.mybatisplus.core.metadata.IPage;
 import com.baomidou.mybatisplus.extension.plugins.pagination.Page;
 import com.ying.springboot.common.Result;
 import com.ying.springboot.entity.Student;
+import com.ying.springboot.entity.User;
 import com.ying.springboot.service.IStudentService;
+import com.ying.springboot.service.UserService;
 import org.springframework.web.bind.annotation.*;
 
 import javax.annotation.Resource;
@@ -25,7 +27,8 @@ public class StudentController {
 
         @Resource
         private IStudentService studentService;
-
+        @Resource
+        private UserService userService;
 
         @GetMapping
         public Result getAll(){return Result.success(studentService.list());}
@@ -66,9 +69,6 @@ public class StudentController {
         return Result.success(studentService.page(page,queryWrapper));
 
         }
-
-
-
 
 
 }
