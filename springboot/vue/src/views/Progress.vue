@@ -77,20 +77,20 @@ export default {
         color: '#3112d9'
       }, {
         content: '第二志愿截至',
-        timestamp: '2018-04-03 20:46',
+        timestamp: '',
         size: 'large',
         icon: 'el-icon-top',
         color: '#0bbd87'
       }, {
         content: '第一志愿截至',
-        timestamp: '2018-04-03 20:46',
+        timestamp: '',
 
         icon: 'el-icon-top',
         size: 'large',
         color:'#d23232'
       }, {
         content: '学生志愿上报截至',
-        timestamp: '2022-06-30 00:00:00',
+        timestamp: '',
         size: 'large',
         icon: 'el-icon-top',
         color:'#00e3e0'

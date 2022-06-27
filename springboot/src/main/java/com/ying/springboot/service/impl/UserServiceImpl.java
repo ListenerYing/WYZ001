@@ -31,7 +31,7 @@ public class UserServiceImpl extends ServiceImpl<UserMapper, User> implements Us
             return userDTO;
         }
         else{
-            throw new ServiceException(Constants.CODE_600,"用户名或密错误");
+            throw new ServiceException(Constants.CODE_600,"用户名或密码错误");
         }
     }
 
