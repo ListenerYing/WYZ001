@@ -14,7 +14,6 @@ public class User {
     private String address;
     private String avatarUrl;
     private String role;
-    private String teacherName;
-    private String teacherEmail;
+
 
 }
