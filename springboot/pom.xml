@@ -14,7 +14,7 @@
     <name>com.ying.springboot</name>
     <description>com.ying.springboot+vue前后端分离项目</description>
     <properties>
-        <java.version>17</java.version>
+        <java.version>8</java.version>
     </properties>
     <dependencies>
         <dependency>

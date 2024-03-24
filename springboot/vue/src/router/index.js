@@ -11,18 +11,12 @@ const routes = [
     redirect: "/home",
     children: [
       { path: 'home', name: '首页', component: () => import('../views/Home.vue')},
-      { path: 'course', name: '课程管理', component: () => import('../views/Course.vue')},
       { path: 'teacherInfo', name: '导师信息', component: () => import('../views/TeacherInfo.vue')},
       { path: 'intention', name: '志愿信息', component: () => import('../views/Intention.vue')},
       { path: 'studentInfo', name: '查看报名', component: () => import('../views/StudentInfo.vue')},
       { path: 'ChosenStudentInfo', name: '查看已选', component: () => import('../views/ChosenStudentInfo')},
       { path: 'progress', name: '查看进度', component: () => import('../views/Progress')},
       { path: 'result', name: '结果公示', component: () => import('../views/Result')},
-      {
-        path: 'im',
-        name: 'Im',
-        component: () => import("@/views/Im"),
-      },
       { path: 'user', name: '用户管理', component: () => import('../views/User.vue')},
       { path: 'person', name: '个人信息', component: () => import('../views/Person.vue')},
     ]
