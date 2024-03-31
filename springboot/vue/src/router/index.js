@@ -19,6 +19,11 @@ const routes = [
       { path: 'result', name: '结果公示', component: () => import('../views/Result')},
       { path: 'user', name: '用户管理', component: () => import('../views/User.vue')},
       { path: 'person', name: '个人信息', component: () => import('../views/Person.vue')},
+      {
+        path: 'im',
+        name: 'Im',
+        component: () => import("@/views/Im"),
+      },
     ]
   },
   {

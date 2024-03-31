@@ -17,9 +17,9 @@
         <i class="el-icon-house"></i>
         <span slot="title">主页</span>
       </el-menu-item>
-<!--      <el-menu-item index="/im"> <i class="el-icon-chat-dot-round"></i>-->
-<!--        <span slot="title">聊天室</span>-->
-<!--      </el-menu-item>-->
+      <el-menu-item index="/im"> <i class="el-icon-chat-dot-round"></i>
+        <span slot="title">聊天室</span>
+      </el-menu-item>
 
       <el-menu-item index="/teacherInfo">
         <i class="el-icon-user"></i>
@@ -53,19 +53,21 @@
 
 
 
+      <div v-if="this.user.role==='admin'">
+        <el-submenu index="1">
+          <template slot="title">
+            <i class="el-icon-menu"></i>
+            <span slot="title">系统管理</span>
+          </template>
+          <el-menu-item index="/user">
+            <i class="el-icon-s-custom"></i>
+            <span slot="title">用户管理</span>
+          </el-menu-item>
+
+        </el-submenu>
+        </div>
 
 
-      <el-submenu index="1">
-        <template slot="title">
-          <i class="el-icon-menu"></i>
-          <span slot="title">系统管理</span>
-        </template>
-        <el-menu-item index="/user">
-          <i class="el-icon-s-custom"></i>
-          <span slot="title">用户管理</span>
-        </el-menu-item>
-
-      </el-submenu>
       <el-menu-item index="/progress">
         <i class="el-icon-time"></i>
         <span slot="title">查看进度</span>

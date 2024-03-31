@@ -5,29 +5,20 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="64e422a5-1b65-454a-8710-985bea71f75a" name="Changes" comment="bug修复">
-      <change afterPath="$PROJECT_DIR$/springboot/extracted_code.docx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/springboot/src/main/java/com/ying/springboot/entity/Notice.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/springboot/vue/src/assets/zjut.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources.local.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.local.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/aa60f2b9-8cf4-4d98-b042-7f293a6eee30.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/aa60f2b9-8cf4-4d98-b042-7f293a6eee30.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__javax_annotation_javax_annotation_api_1_3_2.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/runConfigurations.xml" beforeDir="false" />
+      <change afterPath="$PROJECT_DIR$/springboot/src/main/java/com/ying/springboot/common/WebSocketConfig.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/springboot/src/main/java/com/ying/springboot/component/WebSocketServer.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/springboot/src/main/java/com/ying/springboot/controller/NoticeController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/springboot/src/main/java/com/ying/springboot/mapper/NoticeMapper.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/springboot/src/main/java/com/ying/springboot/service/INoticeService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/springboot/src/main/java/com/ying/springboot/service/impl/NoticeServiceImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/springboot/src/main/resources/mapper/NoticeMapper.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/springboot/vue/src/views/Im.vue" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/springboot/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/springboot/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/springboot/src/main/java/com/ying/springboot/component/WebSocketServer.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/springboot/src/main/java/com/ying/springboot/config/WebSocketConfig.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/springboot/src/main/java/com/ying/springboot/controller/CourseController.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/springboot/src/main/java/com/ying/springboot/entity/Course.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/springboot/src/main/java/com/ying/springboot/mapper/CourseMapper.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/springboot/src/main/java/com/ying/springboot/service/ICourseService.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/springboot/src/main/java/com/ying/springboot/service/impl/CourseServiceImpl.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/springboot/src/main/resources/mapper/CourseMapper.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/springboot/src/main/java/com/ying/springboot/entity/Notice.java" beforeDir="false" afterPath="$PROJECT_DIR$/springboot/src/main/java/com/ying/springboot/entity/Notice.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/springboot/src/main/java/com/ying/springboot/utils/CodeGenerator.java" beforeDir="false" afterPath="$PROJECT_DIR$/springboot/src/main/java/com/ying/springboot/utils/CodeGenerator.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/springboot/vue/src/components/Aside.vue" beforeDir="false" afterPath="$PROJECT_DIR$/springboot/vue/src/components/Aside.vue" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/springboot/vue/src/router/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/springboot/vue/src/router/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/springboot/vue/src/views/Course.vue" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/springboot/vue/src/views/Im.vue" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -208,6 +199,8 @@
       <workItem from="1709961030946" duration="132000" />
       <workItem from="1709961732201" duration="4298000" />
       <workItem from="1711252957203" duration="3931000" />
+      <workItem from="1711276992289" duration="3138000" />
+      <workItem from="1711869310611" duration="3898000" />
     </task>
     <task id="LOCAL-00001" summary="完成功能界面设计 后台代码基本框架完成">
       <created>1655620692666</created>
@@ -370,7 +363,14 @@
       <option name="project" value="LOCAL" />
       <updated>1656344068820</updated>
     </task>
-    <option name="localTasksCounter" value="24" />
+    <task id="LOCAL-00024" summary="bug修复">
+      <created>1711277089204</created>
+      <option name="number" value="00024" />
+      <option name="presentableId" value="LOCAL-00024" />
+      <option name="project" value="LOCAL" />
+      <updated>1711277089205</updated>
+    </task>
+    <option name="localTasksCounter" value="25" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
