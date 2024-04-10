@@ -4,21 +4,27 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="64e422a5-1b65-454a-8710-985bea71f75a" name="Changes" comment="bug修复">
-      <change afterPath="$PROJECT_DIR$/springboot/src/main/java/com/ying/springboot/common/WebSocketConfig.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/springboot/src/main/java/com/ying/springboot/component/WebSocketServer.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/springboot/src/main/java/com/ying/springboot/controller/NoticeController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/springboot/src/main/java/com/ying/springboot/mapper/NoticeMapper.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/springboot/src/main/java/com/ying/springboot/service/INoticeService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/springboot/src/main/java/com/ying/springboot/service/impl/NoticeServiceImpl.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/springboot/src/main/resources/mapper/NoticeMapper.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/springboot/vue/src/views/Im.vue" afterDir="false" />
+    <list default="true" id="64e422a5-1b65-454a-8710-985bea71f75a" name="Changes" comment="excel导出">
+      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/springboot/src/main/java/com/ying/springboot/controller/FileController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/springboot/src/main/resources/mapper/FileMapper.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/springboot/vue/src/views/Notice.vue" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/springboot/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/springboot/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/springboot/src/main/java/com/ying/springboot/controller/NoticeController.java" beforeDir="false" afterPath="$PROJECT_DIR$/springboot/src/main/java/com/ying/springboot/controller/NoticeController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/springboot/src/main/java/com/ying/springboot/entity/Notice.java" beforeDir="false" afterPath="$PROJECT_DIR$/springboot/src/main/java/com/ying/springboot/entity/Notice.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/springboot/src/main/java/com/ying/springboot/mapper/NoticeMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/springboot/src/main/java/com/ying/springboot/mapper/NoticeMapper.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/springboot/src/main/java/com/ying/springboot/service/INoticeService.java" beforeDir="false" afterPath="$PROJECT_DIR$/springboot/src/main/java/com/ying/springboot/service/INoticeService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/springboot/src/main/java/com/ying/springboot/service/impl/NoticeServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/springboot/src/main/java/com/ying/springboot/service/impl/NoticeServiceImpl.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/springboot/src/main/java/com/ying/springboot/utils/CodeGenerator.java" beforeDir="false" afterPath="$PROJECT_DIR$/springboot/src/main/java/com/ying/springboot/utils/CodeGenerator.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/springboot/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/springboot/src/main/resources/application.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/springboot/vue/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/springboot/vue/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/springboot/vue/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/springboot/vue/package.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/springboot/vue/src/components/Aside.vue" beforeDir="false" afterPath="$PROJECT_DIR$/springboot/vue/src/components/Aside.vue" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/springboot/vue/src/router/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/springboot/vue/src/router/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/springboot/vue/src/views/Home.vue" beforeDir="false" afterPath="$PROJECT_DIR$/springboot/vue/src/views/Home.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/springboot/vue/src/views/Result.vue" beforeDir="false" afterPath="$PROJECT_DIR$/springboot/vue/src/views/Result.vue" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -29,6 +35,7 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="Vue Single File Component" />
+        <option value="Interface" />
         <option value="Class" />
       </list>
     </option>
@@ -66,26 +73,30 @@
   <component name="ProjectViewState">
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;RequestMappingsPanelOrder0&quot;: &quot;0&quot;,
-    &quot;RequestMappingsPanelOrder1&quot;: &quot;1&quot;,
-    &quot;RequestMappingsPanelWidth0&quot;: &quot;75&quot;,
-    &quot;RequestMappingsPanelWidth1&quot;: &quot;75&quot;,
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
-    &quot;last_opened_file_path&quot;: &quot;D:/AHub/WYZ001/springboot/vue/src/store&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;project.structure.last.edited&quot;: &quot;Project&quot;,
-    &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
-    &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;reference.projectsettings.compiler.javacompiler&quot;,
-    &quot;spring.configuration.checksum&quot;: &quot;c1e4cc85cedee0f9019f1bde483c0b3e&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RequestMappingsPanelOrder0": "0",
+    "RequestMappingsPanelOrder1": "1",
+    "RequestMappingsPanelWidth0": "75",
+    "RequestMappingsPanelWidth1": "75",
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "WebServerToolWindowFactoryState": "false",
+    "last_opened_file_path": "D:/AHub/WYZ001/springboot/vue/src/store",
+    "nodejs_package_manager_path": "npm",
+    "project.structure.last.edited": "Project",
+    "project.structure.proportion": "0.15",
+    "project.structure.side.proportion": "0.2",
+    "settings.editor.selected.configurable": "reference.projectsettings.compiler.javacompiler",
+    "spring.configuration.checksum": "c1e4cc85cedee0f9019f1bde483c0b3e",
+    "vue.rearranger.settings.migration": "true"
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
+    <key name="CreateClassDialog.RecentsKey">
+      <recent name="com.ying.springboot.mapper" />
+    </key>
     <key name="CopyFile.RECENT_KEYS">
       <recent name="D:\AHub\WYZ001\springboot\vue\src\store" />
       <recent name="D:\AHub\VUE001\springboot\vue\src\assets" />
@@ -200,7 +211,10 @@
       <workItem from="1709961732201" duration="4298000" />
       <workItem from="1711252957203" duration="3931000" />
       <workItem from="1711276992289" duration="3138000" />
-      <workItem from="1711869310611" duration="3898000" />
+      <workItem from="1711869310611" duration="4955000" />
+      <workItem from="1711878855723" duration="13571000" />
+      <workItem from="1712209760985" duration="15707000" />
+      <workItem from="1712725633188" duration="20405000" />
     </task>
     <task id="LOCAL-00001" summary="完成功能界面设计 后台代码基本框架完成">
       <created>1655620692666</created>
@@ -370,11 +384,29 @@
       <option name="project" value="LOCAL" />
       <updated>1711277089205</updated>
     </task>
-    <option name="localTasksCounter" value="25" />
+    <task id="LOCAL-00025" summary="在线聊天">
+      <created>1711878361366</created>
+      <option name="number" value="00025" />
+      <option name="presentableId" value="LOCAL-00025" />
+      <option name="project" value="LOCAL" />
+      <updated>1711878361366</updated>
+    </task>
+    <option name="localTasksCounter" value="26" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.History.Properties">
+    <option name="COLUMN_ID_ORDER">
+      <list>
+        <option value="Default.Root" />
+        <option value="Default.Author" />
+        <option value="Default.Date" />
+        <option value="Default.Subject" />
+        <option value="Space.CommitStatus" />
+      </list>
+    </option>
   </component>
   <component name="Vcs.Log.Tabs.Properties">
     <option name="TAB_STATES">
@@ -411,7 +443,9 @@
     <MESSAGE value="数据库更新" />
     <MESSAGE value="结果展示" />
     <MESSAGE value="bug修复" />
-    <option name="LAST_COMMIT_MESSAGE" value="bug修复" />
+    <MESSAGE value="在线聊天" />
+    <MESSAGE value="excel导出" />
+    <option name="LAST_COMMIT_MESSAGE" value="excel导出" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

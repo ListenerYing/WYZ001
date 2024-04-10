@@ -1,5 +1,6 @@
 package com.ying.springboot.controller;
 
+import cn.hutool.core.date.DateUtil;
 import cn.hutool.core.util.StrUtil;
 import com.baomidou.mybatisplus.core.conditions.query.QueryWrapper;
 import com.baomidou.mybatisplus.core.metadata.IPage;
@@ -27,12 +28,12 @@ import javax.annotation.Resource;
  * </p>
  *
  * @author 应健霆
- * @since 2024-03-24
+ * @since 2024-04-06
  */
 @RestController
 @RequestMapping("/notice")
 public class NoticeController {
-
+        private final String now = DateUtil.now();
         @Resource
         private INoticeService noticeService;
 
@@ -44,7 +45,14 @@ public class NoticeController {
         public Result getById(@PathVariable Integer id){return Result.success(noticeService.getById(id));}
         //新增和修改
         @PostMapping
-        public Result save(@RequestBody Notice notice){return Result.success(noticeService.saveOrUpdate(notice));}
+        public Result save(@RequestBody Notice notice){
+                if (notice.getId() == null) {
+                        notice.setTime(DateUtil.now());
+//                        notice.setUser(TokenUtils.getCurrentUser().getNickname());
+                        notice.setUser("管理员");
+                }
+                noticeService.saveOrUpdate(notice);
+                return Result.success();}
 
         @DeleteMapping("/{id}")
         public Result delete(@PathVariable Integer id) {

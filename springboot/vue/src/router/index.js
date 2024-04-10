@@ -18,6 +18,7 @@ const routes = [
       { path: 'progress', name: '查看进度', component: () => import('../views/Progress')},
       { path: 'result', name: '结果公示', component: () => import('../views/Result')},
       { path: 'user', name: '用户管理', component: () => import('../views/User.vue')},
+      { path: 'notice', name: '系统公告', component: () => import('../views/Notice.vue')},
       { path: 'person', name: '个人信息', component: () => import('../views/Person.vue')},
       {
         path: 'im',

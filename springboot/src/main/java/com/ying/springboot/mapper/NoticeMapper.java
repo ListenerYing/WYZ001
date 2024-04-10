@@ -10,7 +10,7 @@ import org.apache.ibatis.annotations.Mapper;
  * </p>
  *
  * @author 应健霆
- * @since 2024-03-24
+ * @since 2024-04-06
  */
 @Mapper
 public interface NoticeMapper extends BaseMapper<Notice> {
