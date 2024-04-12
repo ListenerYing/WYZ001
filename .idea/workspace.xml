@@ -4,16 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="64e422a5-1b65-454a-8710-985bea71f75a" name="Changes" comment="公告功能">
+    <list default="true" id="64e422a5-1b65-454a-8710-985bea71f75a" name="Changes" comment="志愿删除bug修复">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/springboot/doc/wyz.sql" beforeDir="false" afterPath="$PROJECT_DIR$/springboot/doc/wyz.sql" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/springboot/src/main/java/com/ying/springboot/component/WebSocketServer.java" beforeDir="false" afterPath="$PROJECT_DIR$/springboot/src/main/java/com/ying/springboot/component/WebSocketServer.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/springboot/src/main/java/com/ying/springboot/controller/IntentionController.java" beforeDir="false" afterPath="$PROJECT_DIR$/springboot/src/main/java/com/ying/springboot/controller/IntentionController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/springboot/vue/src/views/Im.vue" beforeDir="false" afterPath="$PROJECT_DIR$/springboot/vue/src/views/Im.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/springboot/vue/src/views/Intention.vue" beforeDir="false" afterPath="$PROJECT_DIR$/springboot/vue/src/views/Intention.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/springboot/vue/src/views/Login.vue" beforeDir="false" afterPath="$PROJECT_DIR$/springboot/vue/src/views/Login.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/springboot/vue/src/views/StudentInfo.vue" beforeDir="false" afterPath="$PROJECT_DIR$/springboot/vue/src/views/StudentInfo.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/springboot/vue/src/views/TeacherInfo.vue" beforeDir="false" afterPath="$PROJECT_DIR$/springboot/vue/src/views/TeacherInfo.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/springboot/src/main/java/com/ying/springboot/controller/StudentController.java" beforeDir="false" afterPath="$PROJECT_DIR$/springboot/src/main/java/com/ying/springboot/controller/StudentController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/springboot/vue/src/views/Result.vue" beforeDir="false" afterPath="$PROJECT_DIR$/springboot/vue/src/views/Result.vue" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -204,7 +198,7 @@
       <workItem from="1711878855723" duration="13571000" />
       <workItem from="1712209760985" duration="15707000" />
       <workItem from="1712725633188" duration="22117000" />
-      <workItem from="1712905148202" duration="8342000" />
+      <workItem from="1712905148202" duration="10221000" />
     </task>
     <task id="LOCAL-00001" summary="完成功能界面设计 后台代码基本框架完成">
       <created>1655620692666</created>
@@ -388,7 +382,14 @@
       <option name="project" value="LOCAL" />
       <updated>1712753324388</updated>
     </task>
-    <option name="localTasksCounter" value="27" />
+    <task id="LOCAL-00027" summary="志愿删除bug修复">
+      <created>1712919626521</created>
+      <option name="number" value="00027" />
+      <option name="presentableId" value="LOCAL-00027" />
+      <option name="project" value="LOCAL" />
+      <updated>1712919626521</updated>
+    </task>
+    <option name="localTasksCounter" value="28" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -443,7 +444,8 @@
     <MESSAGE value="在线聊天" />
     <MESSAGE value="excel导出" />
     <MESSAGE value="公告功能" />
-    <option name="LAST_COMMIT_MESSAGE" value="公告功能" />
+    <MESSAGE value="志愿删除bug修复" />
+    <option name="LAST_COMMIT_MESSAGE" value="志愿删除bug修复" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

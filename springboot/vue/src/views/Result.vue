@@ -1,8 +1,11 @@
 <template>
   <div>
-    <div class="handle-box">
-      <el-button type="primary" @click="exportXlsx">导出Excel</el-button>
-    </div>
+    <template>
+      <div class="handle-box" v-if="user.role === 'admin'">
+        <el-button type="success" style="border-radius: 4px; margin-right: 10px;" @click="exportXlsx">导出Excel</el-button>
+        <el-button style="background-color: #f56c6c; color: white; border-radius: 4px;" @click="assign">一键分配</el-button>
+      </div>
+    </template>
 
 
 
@@ -46,6 +49,7 @@ export default {
   name: "Result.vue",
   data(){
     return{
+      user:localStorage.getItem("user") ? JSON.parse(localStorage.getItem("user")) : {},
       tableData: [],
       pageNum: 1,
       pageSize: 20,
@@ -109,6 +113,25 @@ export default {
       // 利用file-saver保存文件
       saveAs(new Blob([s2ab(wbout)], { type: "application/octet-stream" }), "result.xlsx");
     },
+    assign() {
+      this.request.get('/student/assign')
+          .then(res => {
+            // 根据响应结果显示提示
+            if (res.data) {
+              this.$message.success('导师分配成功');
+              // 分配成功后重新载入数据
+              this.load();
+            } else {
+              // 如果响应结果不是预期的成功码，提醒用户分配失败
+              this.$message.error('导师分配失败');
+            }
+          })
+          .catch(error => {
+            // 如果请求失败，提示用户
+            console.error('分配请求失败: ', error);
+            this.$message.error('分配请求失败: ' + error.message);
+          });
+    },
   }
 
 }
@@ -116,5 +139,17 @@ export default {
 </script>
 
 <style scoped>
+.handle-box {
+  display: flex;
+  align-items: center;
+  justify-content: start;
+}
 
+.el-button {
+  margin-right: 10px; /* 控制按钮之间的间距 */
+}
+
+.el-button:last-child {
+  margin-right: 0; /* 最后一个按钮不需要右边距 */
+}
 </style>

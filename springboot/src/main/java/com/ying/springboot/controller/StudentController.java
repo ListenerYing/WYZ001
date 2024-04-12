@@ -8,6 +8,7 @@ import com.ying.springboot.entity.Student;
 import com.ying.springboot.entity.User;
 import com.ying.springboot.service.IStudentService;
 import com.ying.springboot.service.UserService;
+import org.springframework.jdbc.core.JdbcTemplate;
 import org.springframework.web.bind.annotation.*;
 
 import javax.annotation.Resource;
@@ -29,7 +30,8 @@ public class StudentController {
         private IStudentService studentService;
         @Resource
         private UserService userService;
-
+        @Resource
+        private JdbcTemplate jdbcTemplate;
         @GetMapping
         public Result getAll(){return Result.success(studentService.list());}
         //根据id查询
@@ -70,6 +72,12 @@ public class StudentController {
 
         }
 
+        @GetMapping("/assign")
+        public Result assignStudents() {
+                // 调用存储过程
+                jdbcTemplate.execute("{call student_assign()}");
 
+                return Result.success("学生分配成功");
+        }
 }
 
