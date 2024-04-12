@@ -6,7 +6,7 @@
       <el-button style="margin-left: 5px" type="warning" @click="reset">重置</el-button>
     </div>
     <div style="margin: 10px 0">
-      <el-button type="primary" icon="el-icon-circle-plus" @click="handleAdd">新增</el-button>
+<!--      <el-button type="primary" icon="el-icon-circle-plus" @click="handleAdd">新增</el-button>-->
       <el-popconfirm
           confirm-button-text='确定'
           cancel-button-text='我再想想'
@@ -17,8 +17,8 @@
       >
         <el-button type="danger" icon="el-icon-remove-outline" slot="reference">批量删除</el-button>
       </el-popconfirm>
-      <el-button type="primary" icon="el-icon-share" style="margin-left: 10px">导出</el-button>
-      <el-button type="primary">导入<i class="el-icon-upload el-icon--right"></i></el-button>
+<!--      <el-button type="primary" icon="el-icon-share" style="margin-left: 10px">导出</el-button>-->
+<!--      <el-button type="primary">导入<i class="el-icon-upload el-icon&#45;&#45;right"></i></el-button>-->
 
     </div>
     <el-table :data="tableData" border stripe @selection-change="handleSelectionChange">
@@ -206,7 +206,7 @@ export default {
     },
     delBatch(){
       let ids=this.multipleSelection.map(v=>v.id)//把对象数组变成纯id数组
-      this.request.post("/user/del/batch",ids).then(res=>{
+      this.request.post("/intention/del/batch",ids).then(res=>{
         if(res.data){
           this.$message.success("批量删除成功")
           this.load()

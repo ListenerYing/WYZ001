@@ -107,12 +107,14 @@ export default {
     init() {
       this.user = localStorage.getItem("user") ? JSON.parse(localStorage.getItem("user")) : {}
       let username = this.user.username;
+      let nickname = this.user.nickname;
+
       let _this = this;
       if (typeof (WebSocket) == "undefined") {
         console.log("您的浏览器不支持WebSocket");
       } else {
         console.log("您的浏览器支持WebSocket");
-        let socketUrl = "ws://localhost:9090/imserver/" + username;
+        let socketUrl = "ws://localhost:9090/imserver/" + username+nickname;
         if (socket != null) {
           socket.close();
           socket = null;

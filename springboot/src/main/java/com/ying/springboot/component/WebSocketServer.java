@@ -2,6 +2,7 @@ package com.ying.springboot.component;
 import cn.hutool.json.JSONArray;
 import cn.hutool.json.JSONObject;
 import cn.hutool.json.JSONUtil;
+import com.ying.springboot.entity.User;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.stereotype.Component;
@@ -35,6 +36,8 @@ public class WebSocketServer {
         for (Object key : sessionMap.keySet()) {
             JSONObject jsonObject = new JSONObject();
             jsonObject.set("username", key);
+
+//            jsonObject.set("nickname", nickname);
             // {"username", "zhang", "username": "admin"}
             array.add(jsonObject);
         }

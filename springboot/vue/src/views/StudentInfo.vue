@@ -167,6 +167,7 @@ export default {
             }else {
               this.$message.error("选择失败！")
             }
+        this.load()
           }
 
       )

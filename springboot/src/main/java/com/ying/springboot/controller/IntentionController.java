@@ -6,6 +6,7 @@ import com.baomidou.mybatisplus.core.conditions.query.QueryWrapper;
 import com.baomidou.mybatisplus.core.conditions.update.UpdateWrapper;
 import com.baomidou.mybatisplus.core.metadata.IPage;
 import com.baomidou.mybatisplus.extension.plugins.pagination.Page;
+import com.ying.springboot.common.Constants;
 import com.ying.springboot.common.Result;
 import com.ying.springboot.entity.User;
 import com.ying.springboot.mapper.IntentionMapper;
@@ -95,7 +96,11 @@ public class IntentionController {
                 QueryWrapper<Intention> queryWrapper=new QueryWrapper<>();
                 queryWrapper.eq("student_id",student_id);
                 List<Intention> intentionList=intentionService.list(queryWrapper);
-
+// 判断志愿数量是否已经达到上限
+                if (intentionList.size() >= 3) {
+                        // 用Constants.CODE_400表示请求参数错误或请求方式错误
+                        return Result.error(Constants.CODE_400, "已达到添加志愿的数量上限");
+                }
                 Intention intention=new Intention();
                 intention.setStudentId(student_id);
                 intention.setTeacherId(teacher_id);

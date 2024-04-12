@@ -5,22 +5,22 @@
       <el-button style="margin-left: 5px" type="primary" icon="el-icon-search" @click="load">搜索</el-button>
       <el-button style="margin-left: 5px" type="warning" @click="reset">重置</el-button>
     </div>
-    <div style="margin: 10px 0">
-      <el-button type="primary" icon="el-icon-circle-plus" @click="handleAdd">新增</el-button>
-      <el-popconfirm
-          confirm-button-text='确定'
-          cancel-button-text='我再想想'
-          icon="el-icon-info"
-          icon-color="red"
-          title="您确定批量删除这条记录吗？"
-          @confirm="delBatch"
-      >
-        <el-button type="danger" icon="el-icon-remove-outline" slot="reference">批量删除</el-button>
-      </el-popconfirm>
-      <el-button type="primary" icon="el-icon-share" style="margin-left: 10px">导出</el-button>
-      <el-button type="primary">导入<i class="el-icon-upload el-icon--right"></i></el-button>
+<!--    <div style="margin: 10px 0">-->
+<!--      <el-button type="primary" icon="el-icon-circle-plus" @click="handleAdd">新增</el-button>-->
+<!--      <el-popconfirm-->
+<!--          confirm-button-text='确定'-->
+<!--          cancel-button-text='我再想想'-->
+<!--          icon="el-icon-info"-->
+<!--          icon-color="red"-->
+<!--          title="您确定批量删除这条记录吗？"-->
+<!--          @confirm="delBatch"-->
+<!--      >-->
+<!--        <el-button type="danger" icon="el-icon-remove-outline" slot="reference">批量删除</el-button>-->
+<!--      </el-popconfirm>-->
+<!--      <el-button type="primary" icon="el-icon-share" style="margin-left: 10px">导出</el-button>-->
+<!--      <el-button type="primary">导入<i class="el-icon-upload el-icon&#45;&#45;right"></i></el-button>-->
 
-    </div>
+<!--    </div>-->
     <el-table :data="tableData" border stripe @selection-change="handleSelectionChange">
       <el-table-column
           type="selection"
@@ -200,7 +200,7 @@ export default {
 
           this.load()
         }else {
-          this.$message.error("选择失败！")
+          this.$message.error("达到当前选择上限！选择失败！")
         }
       })
 
