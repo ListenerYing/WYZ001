@@ -10,7 +10,7 @@ import org.apache.ibatis.annotations.Mapper;
  * </p>
  *
  * @author 应健霆
- * @since 2022-06-26
+ * @since 2024-04-13
  */
 @Mapper
 public interface DeadlineMapper extends BaseMapper<Deadline> {

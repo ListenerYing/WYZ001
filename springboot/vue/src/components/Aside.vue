@@ -18,7 +18,7 @@
         <span slot="title">主页</span>
       </el-menu-item>
       <el-menu-item index="/im"> <i class="el-icon-chat-dot-round"></i>
-        <span slot="title">聊天室</span>
+        <span slot="title">在线交流</span>
       </el-menu-item>
 
       <el-menu-item index="/teacherInfo">
@@ -62,6 +62,10 @@
           <el-menu-item index="/user">
             <i class="el-icon-s-custom"></i>
             <span slot="title">用户管理</span>
+          </el-menu-item>
+          <el-menu-item index="/timing">
+            <i class="el-icon-s-custom"></i>
+            <span slot="title">时间管理</span>
           </el-menu-item>
           <el-menu-item index="/notice">
             <i class="el-icon-news"></i>

@@ -23,6 +23,13 @@
       <el-form-item label="电话">
         <el-input v-model="form.phone" autocomplete="off"></el-input>
       </el-form-item>
+      <el-form-item label="专业" v-if="user.role==='学生'">
+        <el-input v-model="extra.major"></el-input>
+      </el-form-item>
+      <el-form-item label="班级" v-if="user.role==='学生'">
+        <el-input v-model="extra.clazz"></el-input>
+      </el-form-item>
+
       <el-form-item label="地址">
         <el-input type="textarea" v-model="form.address" autocomplete="off" autosize></el-input>
       </el-form-item>

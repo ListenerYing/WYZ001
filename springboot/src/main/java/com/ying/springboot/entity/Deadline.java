@@ -2,6 +2,7 @@ package com.ying.springboot.entity;
 
 import com.baomidou.mybatisplus.annotation.IdType;
 import com.baomidou.mybatisplus.annotation.TableId;
+import com.baomidou.mybatisplus.annotation.TableName;
 import java.io.Serializable;
 import java.time.LocalDateTime;
 import io.swagger.annotations.ApiModel;
@@ -11,14 +12,15 @@ import lombok.Setter;
 
 /**
  * <p>
- *
+ * 
  * </p>
  *
  * @author 应健霆
- * @since 2022-06-26
+ * @since 2024-04-13
  */
 @Getter
 @Setter
+@TableName("deadline")
 @ApiModel(value = "Deadline对象", description = "")
 public class Deadline implements Serializable {
 
@@ -27,11 +29,17 @@ public class Deadline implements Serializable {
     @TableId(value = "id", type = IdType.AUTO)
     private Integer id;
 
-    private String first;
+    @ApiModelProperty("志愿填报开始时间")
+    private LocalDateTime startTime;
 
-    private String second;
+    @ApiModelProperty("志愿填报结束时间")
+    private LocalDateTime endTime;
 
-    private String third;
+    @ApiModelProperty("是否当前激活的配置")
+    private Boolean isActive;
+
+    @ApiModelProperty("时间配置描述")
+    private String description;
 
 
 }

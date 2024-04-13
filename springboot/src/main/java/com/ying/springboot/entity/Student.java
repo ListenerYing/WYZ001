@@ -33,5 +33,11 @@ public class Student implements Serializable {
     @ApiModelProperty("导师id")
     private Integer teacherId;
 
+    @ApiModelProperty("班级")
+    private String clazz;
+
+    @ApiModelProperty("专业")
+    private String major;
+
 
 }

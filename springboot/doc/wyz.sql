@@ -22,16 +22,18 @@ DROP TABLE IF EXISTS `deadline`;
 
 CREATE TABLE `deadline` (
   `id` int NOT NULL AUTO_INCREMENT,
-  `first` timestamp NULL DEFAULT NULL,
-  `second` timestamp NULL DEFAULT NULL,
-  `third` timestamp NULL DEFAULT NULL,
+  `start_time` datetime NOT NULL COMMENT '志愿填报开始时间',
+  `end_time` datetime NOT NULL COMMENT '志愿填报结束时间',
+  `is_active` tinyint(1) NOT NULL DEFAULT '0' COMMENT '是否当前激活的配置',
+  `description` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL COMMENT '时间配置描述',
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=12 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 /*Data for the table `deadline` */
 
-insert  into `deadline`(`id`,`first`,`second`,`third`) values 
-(1,'2022-06-28 18:10:19','2022-06-30 18:10:31','2022-07-01 17:10:34');
+insert  into `deadline`(`id`,`start_time`,`end_time`,`is_active`,`description`) values 
+(1,'2024-04-18 16:00:00','2023-04-28 07:32:10',1,'老师选择志愿时间'),
+(6,'2024-04-17 16:00:00','2024-04-25 16:00:00',0,'');
 
 /*Table structure for table `file` */
 
@@ -61,7 +63,7 @@ CREATE TABLE `intention` (
   `sequence` int DEFAULT NULL COMMENT '志愿顺序',
   PRIMARY KEY (`id`),
   KEY `sequence` (`sequence`)
-) ENGINE=InnoDB AUTO_INCREMENT=78 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=79 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 /*Data for the table `intention` */
 
@@ -71,11 +73,6 @@ insert  into `intention`(`id`,`student_id`,`teacher_id`,`sequence`) values
 (33,5,102,1),
 (34,5,100,3),
 (35,5,105,2),
-(37,6,104,1),
-(38,6,101,2),
-(41,7,104,1),
-(43,8,103,1),
-(44,8,104,2),
 (46,9,101,1),
 (47,9,102,2),
 (48,10,103,1),
@@ -89,9 +86,7 @@ insert  into `intention`(`id`,`student_id`,`teacher_id`,`sequence`) values
 (56,12,100,3),
 (58,13,101,1),
 (59,13,104,2),
-(61,14,103,1),
-(62,14,105,2),
-(64,15,105,1);
+(78,2,100,1);
 
 /*Table structure for table `notice` */
 
@@ -132,34 +127,34 @@ CREATE TABLE `student` (
   `gpa` decimal(10,2) unsigned DEFAULT NULL COMMENT '绩点',
   `introduction` text CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci COMMENT '自我介绍',
   `teacher_id` int DEFAULT '0' COMMENT '导师id',
+  `clazz` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci DEFAULT NULL COMMENT '班级',
+  `major` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL COMMENT '专业',
   PRIMARY KEY (`id`),
   CONSTRAINT `student_ibfk_1` FOREIGN KEY (`id`) REFERENCES `sys_user` (`id`) ON DELETE CASCADE ON UPDATE CASCADE
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 /*Data for the table `student` */
 
-insert  into `student`(`id`,`gpa`,`introduction`,`teacher_id`) values 
-(2,'3.28','我是一个热情开朗的女生，随和，自信，乐于助人，有责任心。',100),
-(3,'4.10','我是个有想象力的人，对什么都很好奇。',102),
-(4,'4.35','我求知欲较强，尤其喜欢历史、文学、人文地理等学科。',100),
-(5,'3.87','我深深迷恋古人所说的读万卷书，行万里路。因此我一爱看书，二爱旅行。',102),
-(6,'3.57','我对生活充满希望，因为我始终相信只要自己不放弃，我的这一生一定会活得有意义的。',101),
-(7,'4.03','我的生活非常充实，我学习很努力，其中多次拿了学校的奖学金。',101),
-(8,'4.00','大学不但让我学会了如何思考，学习的方法，还让我看到了实践的重要性。',101),
-(9,'3.88','我的一大特长爱好是设计，我积极地参加各种活动和设计大赛，曾在科技文化节中荣获节徽设计大赛二等奖。',103),
-(10,'2.67','我努力提升自我素质，全面锻炼自己，扎实完成自己的学习任务。',103),
-(11,'3.66','我经过自己的不懈努力连续三年获得校\"二等\"学习奖学金，\"优秀学生干部\"，\"优秀大学生\"等荣誉。',103),
-(12,'2.94','我坚信兴趣是最好的老师，不管今后在学业或科研上遇到什么困难，都要想尽办法克服。',104),
-(13,'3.45','我希望通过专业系统的学习，能够用自己所学的知识去解决实际问题，做出好成绩。',104),
-(14,'3.56','我已对我的学习做好了规划，我已经让自己做好了全面的准备。',104),
-(15,'3.22','我的大学生活让我学到了很多，很多的实践让我从从各个方面提高了自己。',105),
-(16,'2.45','我热爱计算机，希望未来能在计算机领域有所成就。',105),
-(17,'3.64','我现在是卓越教师班的学生，希望未来能成为一名卓越的老师，一直为此努力。',105),
-(18,'3.69','支教是我的梦想，我从高中开始就不放过每一个能接触支教的机会，未来我一定要去支教。',105),
-(19,'3.78','敲代码对我来说是件快乐的事，我闲着没事就会去看看代码。',105),
-(20,'3.26','我善于交际，善于管理，现任本班班长和团学负责人，有一定的组织能力。',106),
-(100,NULL,'于2008年取得英国计算机科学博士学位，发表多篇期刊和会议文章。现指导多名研究生从事计算机科学、教育技术学和神经科学等方面的教学和研究工作。',0),
-(102,NULL,'致力于特殊教育信息化和职业教育信息化，重点开展职业院校智慧教育和孤独症儿童早期干预研究。',106);
+insert  into `student`(`id`,`gpa`,`introduction`,`teacher_id`,`clazz`,`major`) values 
+(2,'3.28','我是一个热情开朗的女生，随和，自信，乐于助人，有责任心。',100,'计师2001','计算机科学与技术'),
+(3,'4.10','我是个有想象力的人，对什么都很好奇。',102,NULL,NULL),
+(4,'4.35','我求知欲较强，尤其喜欢历史、文学、人文地理等学科。',100,NULL,NULL),
+(5,'3.87','我深深迷恋古人所说的读万卷书，行万里路。因此我一爱看书，二爱旅行。',102,NULL,NULL),
+(6,'3.57','我对生活充满希望，因为我始终相信只要自己不放弃，我的这一生一定会活得有意义的。',100,NULL,NULL),
+(7,'4.03','我的生活非常充实，我学习很努力，其中多次拿了学校的奖学金。',101,NULL,NULL),
+(8,'4.00','大学不但让我学会了如何思考，学习的方法，还让我看到了实践的重要性。',101,NULL,NULL),
+(9,'3.88','我的一大特长爱好是设计，我积极地参加各种活动和设计大赛，曾在科技文化节中荣获节徽设计大赛二等奖。',103,NULL,NULL),
+(10,'2.67','我努力提升自我素质，全面锻炼自己，扎实完成自己的学习任务。',103,NULL,NULL),
+(11,'3.66','我经过自己的不懈努力连续三年获得校\"二等\"学习奖学金，\"优秀学生干部\"，\"优秀大学生\"等荣誉。',103,NULL,NULL),
+(12,'2.94','我坚信兴趣是最好的老师，不管今后在学业或科研上遇到什么困难，都要想尽办法克服。',104,NULL,NULL),
+(13,'3.45','我希望通过专业系统的学习，能够用自己所学的知识去解决实际问题，做出好成绩。',104,NULL,NULL),
+(14,'3.56','我已对我的学习做好了规划，我已经让自己做好了全面的准备。',101,NULL,NULL),
+(15,'3.22','我的大学生活让我学到了很多，很多的实践让我从从各个方面提高了自己。',104,NULL,NULL),
+(16,'2.45','我热爱计算机，希望未来能在计算机领域有所成就。',105,NULL,NULL),
+(17,'3.64','我现在是卓越教师班的学生，希望未来能成为一名卓越的老师，一直为此努力。',105,NULL,NULL),
+(18,'3.69','支教是我的梦想，我从高中开始就不放过每一个能接触支教的机会，未来我一定要去支教。',105,NULL,NULL),
+(19,'3.78','敲代码对我来说是件快乐的事，我闲着没事就会去看看代码。',105,NULL,NULL),
+(20,'3.26','我善于交际，善于管理，现任本班班长和团学负责人，有一定的组织能力。',106,NULL,NULL);
 
 /*Table structure for table `sys_user` */
 
@@ -227,6 +222,7 @@ CREATE TABLE `teacher` (
 /*Data for the table `teacher` */
 
 insert  into `teacher`(`id`,`title`,`enrollment`,`requirement`,`introduction`) values 
+(2,NULL,NULL,NULL,'我是一个热情开朗的女生，随和，自信，乐于助人，有责任心。'),
 (100,'讲师',3,'熟悉深度学习理论','于2008年取得英国计算机科学博士学位，发表多篇期刊和会议文章。现指导多名研究生从事计算机科学、教育技术学和神经科学等方面的教学和研究工作。'),
 (101,'副教授',3,'负责任，擅长计算机知识','已入选浙江省高校中青年学科带头人、浙江省151人才工程和浙江工业大学青年英才支持计划。'),
 (102,'讲师',2,'有进取心，乐于助人，有管理能力','致力于特殊教育信息化和职业教育信息化，重点开展职业院校智慧教育和孤独症儿童早期干预研究。'),

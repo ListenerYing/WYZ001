@@ -71,19 +71,25 @@
         :visible.sync="dialogFormVisible"
         width="30%"
     >
-      <el-form  label-width="80px" size="small">
+      <el-form  label-width="100px" size="large">
         <el-form-item label="绩点">
-          <el-input v-model="form.gpa" auto-complete="off"></el-input>
+          <el-input v-model="form.gpa" auto-complete="off" readonly></el-input>
+        </el-form-item><el-form-item label="专业">
+          <el-input v-model="form.major" auto-complete="off" readonly></el-input>
+        </el-form-item><el-form-item label="班级">
+          <el-input v-model="form.clazz" auto-complete="off" readonly></el-input>
         </el-form-item>
 
-        <el-form-item label="自我介绍">
-          <el-input  type="textarea" v-model="form.introduction" auto-complete="off" autosize></el-input>
+        <el-form-item label="自我介绍       与本科规划">
+          <el-scrollbar style="height: 200px; border: 1px solid #ebeef5; border-radius: 4px; padding: 10px;">
+            <div>{{ form.introduction }}</div>
+          </el-scrollbar>
         </el-form-item>
 
       </el-form>
       <div slot="footer" class="dialog-footer">
-        <el-button @click="dialogFormVisible=false">取消</el-button>
-        <el-button type="primary" @click="save">确定</el-button>
+        <el-button @click="dialogFormVisible=false">关闭</el-button>
+
       </div>
 
 

@@ -20,6 +20,7 @@ const routes = [
       { path: 'user', name: '用户管理', component: () => import('../views/User.vue')},
       { path: 'notice', name: '系统公告', component: () => import('../views/Notice.vue')},
       { path: 'person', name: '个人信息', component: () => import('../views/Person.vue')},
+      { path: 'timing', name: '时间设置', component: () => import('../views/Time.vue')},
       {
         path: 'im',
         name: 'Im',

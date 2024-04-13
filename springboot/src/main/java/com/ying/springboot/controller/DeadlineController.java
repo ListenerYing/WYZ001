@@ -27,7 +27,7 @@ import javax.annotation.Resource;
  * </p>
  *
  * @author 应健霆
- * @since 2022-06-26
+ * @since 2024-04-13
  */
 @RestController
 @RequestMapping("/deadline")
@@ -45,7 +45,8 @@ public class DeadlineController {
         //新增和修改
         @PostMapping
         public Result save(@RequestBody Deadline deadline){return Result.success(deadlineService.saveOrUpdate(deadline));}
-
+//        @PostMapping("/{id}")
+//        public Result saveById(@PathVariable Integer id){return Result.success(deadlineService.updateById(id));}
         @DeleteMapping("/{id}")
         public Result delete(@PathVariable Integer id) {
                 return Result.success(deadlineService.removeById(id));
