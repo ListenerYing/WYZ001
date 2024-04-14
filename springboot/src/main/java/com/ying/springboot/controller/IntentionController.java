@@ -8,8 +8,10 @@ import com.baomidou.mybatisplus.core.metadata.IPage;
 import com.baomidou.mybatisplus.extension.plugins.pagination.Page;
 import com.ying.springboot.common.Constants;
 import com.ying.springboot.common.Result;
+import com.ying.springboot.entity.Deadline;
 import com.ying.springboot.entity.User;
 import com.ying.springboot.mapper.IntentionMapper;
+import com.ying.springboot.service.IDeadlineService;
 import com.ying.springboot.service.UserService;
 import io.swagger.models.auth.In;
 import org.springframework.transaction.annotation.Isolation;
@@ -17,6 +19,7 @@ import org.springframework.transaction.annotation.Transactional;
 import org.springframework.web.bind.annotation.*;
 
 import java.io.Console;
+import java.time.LocalDateTime;
 import java.util.List;
 import java.util.concurrent.TimeUnit;
 
@@ -40,7 +43,8 @@ import javax.annotation.Resource;
 @RestController
 @RequestMapping("/intention")
 public class IntentionController {
-
+        @Resource
+        private IDeadlineService deadlineService;
         @Resource
         private IIntentionService intentionService;
         @Resource
@@ -93,10 +97,20 @@ public class IntentionController {
         @GetMapping("/addIntention")
         public Result addIntention(@RequestParam Integer student_id,
                                    @RequestParam Integer teacher_id){
+
+
+
+                QueryWrapper<Deadline> queryWrapper1 = new QueryWrapper<>();
+                queryWrapper1.eq("is_active", 1); // 假设数据库中 is_active=1 表示激活状态
+                Deadline activeDeadline = deadlineService.getOne(queryWrapper1);
+                LocalDateTime now = LocalDateTime.now();
+                if (activeDeadline == null || now.isBefore(activeDeadline.getStartTime()) || now.isAfter(activeDeadline.getEndTime())) {
+                        return Result.error(Constants.CODE_400, "还没有到选择时间。");
+                }
                 QueryWrapper<Intention> queryWrapper=new QueryWrapper<>();
                 queryWrapper.eq("student_id",student_id);
                 List<Intention> intentionList=intentionService.list(queryWrapper);
-// 判断志愿数量是否已经达到上限
+                // 判断志愿数量是否已经达到上限
                 if (intentionList.size() >= 3) {
                         // 用Constants.CODE_400表示请求参数错误或请求方式错误
                         return Result.error(Constants.CODE_400, "已达到添加志愿的数量上限");

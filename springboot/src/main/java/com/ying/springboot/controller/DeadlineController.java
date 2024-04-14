@@ -68,7 +68,18 @@ public class DeadlineController {
 
         }
 
+        @GetMapping("/active")
+        public Result getActiveDeadline() {
+                QueryWrapper<Deadline> queryWrapper = new QueryWrapper<>();
+                queryWrapper.eq("is_active", 1); // 假设数据库中 is_active=1 表示激活状态
+                Deadline activeDeadline = deadlineService.getOne(queryWrapper);
 
+                if (activeDeadline != null) {
+                        return Result.success(activeDeadline);
+                } else {
+                        return Result.error(Constants.CODE_400, "当前没有激活的Deadline。");
+                }
+        }
 
 
 

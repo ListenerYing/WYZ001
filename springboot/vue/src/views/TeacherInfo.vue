@@ -200,7 +200,7 @@ export default {
 
           this.load()
         }else {
-          this.$message.error("达到当前选择上限！选择失败！")
+          this.$message.error(res.msg)
         }
       })
 

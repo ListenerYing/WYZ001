@@ -4,20 +4,12 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="64e422a5-1b65-454a-8710-985bea71f75a" name="Changes" comment="一键分配">
-      <change afterPath="$PROJECT_DIR$/springboot/vue/src/views/Time.vue" afterDir="false" />
+    <list default="true" id="64e422a5-1b65-454a-8710-985bea71f75a" name="Changes" comment="时间管理">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/springboot/src/main/java/com/ying/springboot/controller/DeadlineController.java" beforeDir="false" afterPath="$PROJECT_DIR$/springboot/src/main/java/com/ying/springboot/controller/DeadlineController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/springboot/src/main/java/com/ying/springboot/entity/Deadline.java" beforeDir="false" afterPath="$PROJECT_DIR$/springboot/src/main/java/com/ying/springboot/entity/Deadline.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/springboot/src/main/java/com/ying/springboot/entity/Student.java" beforeDir="false" afterPath="$PROJECT_DIR$/springboot/src/main/java/com/ying/springboot/entity/Student.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/springboot/src/main/java/com/ying/springboot/mapper/DeadlineMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/springboot/src/main/java/com/ying/springboot/mapper/DeadlineMapper.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/springboot/src/main/java/com/ying/springboot/service/IDeadlineService.java" beforeDir="false" afterPath="$PROJECT_DIR$/springboot/src/main/java/com/ying/springboot/service/IDeadlineService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/springboot/src/main/java/com/ying/springboot/service/impl/DeadlineServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/springboot/src/main/java/com/ying/springboot/service/impl/DeadlineServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/springboot/src/main/java/com/ying/springboot/utils/CodeGenerator.java" beforeDir="false" afterPath="$PROJECT_DIR$/springboot/src/main/java/com/ying/springboot/utils/CodeGenerator.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/springboot/vue/src/components/Aside.vue" beforeDir="false" afterPath="$PROJECT_DIR$/springboot/vue/src/components/Aside.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/springboot/vue/src/router/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/springboot/vue/src/router/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/springboot/vue/src/views/Person.vue" beforeDir="false" afterPath="$PROJECT_DIR$/springboot/vue/src/views/Person.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/springboot/vue/src/views/StudentInfo.vue" beforeDir="false" afterPath="$PROJECT_DIR$/springboot/vue/src/views/StudentInfo.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/springboot/src/main/java/com/ying/springboot/controller/IntentionController.java" beforeDir="false" afterPath="$PROJECT_DIR$/springboot/src/main/java/com/ying/springboot/controller/IntentionController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/springboot/vue/src/views/TeacherInfo.vue" beforeDir="false" afterPath="$PROJECT_DIR$/springboot/vue/src/views/TeacherInfo.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/springboot/vue/src/views/User.vue" beforeDir="false" afterPath="$PROJECT_DIR$/springboot/vue/src/views/User.vue" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -211,7 +203,7 @@
       <workItem from="1711878855723" duration="13571000" />
       <workItem from="1712209760985" duration="15707000" />
       <workItem from="1712725633188" duration="22117000" />
-      <workItem from="1712905148202" duration="21527000" />
+      <workItem from="1712905148202" duration="25635000" />
     </task>
     <task id="LOCAL-00001" summary="完成功能界面设计 后台代码基本框架完成">
       <created>1655620692666</created>
@@ -409,7 +401,14 @@
       <option name="project" value="LOCAL" />
       <updated>1712921441760</updated>
     </task>
-    <option name="localTasksCounter" value="29" />
+    <task id="LOCAL-00029" summary="时间管理">
+      <created>1713012591369</created>
+      <option name="number" value="00029" />
+      <option name="presentableId" value="LOCAL-00029" />
+      <option name="project" value="LOCAL" />
+      <updated>1713012591369</updated>
+    </task>
+    <option name="localTasksCounter" value="30" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -466,7 +465,8 @@
     <MESSAGE value="公告功能" />
     <MESSAGE value="志愿删除bug修复" />
     <MESSAGE value="一键分配" />
-    <option name="LAST_COMMIT_MESSAGE" value="一键分配" />
+    <MESSAGE value="时间管理" />
+    <option name="LAST_COMMIT_MESSAGE" value="时间管理" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

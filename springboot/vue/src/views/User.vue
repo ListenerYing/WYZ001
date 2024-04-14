@@ -31,15 +31,17 @@
       </el-table-column>
       <el-table-column prop="id" label="ID" width="80">
       </el-table-column>
-      <el-table-column prop="username" label="用户名" width="140">
+      <el-table-column prop="username" label="学工号" width="140">
       </el-table-column>
-      <el-table-column prop="nickname" label="昵称" width="120">
+      <el-table-column prop="nickname" label="姓名" width="120">
       </el-table-column>
       <el-table-column prop="email" label="邮箱">
       </el-table-column>
       <el-table-column prop="phone" label="电话">
       </el-table-column>
       <el-table-column prop="address" label="地址">
+      </el-table-column>
+      <el-table-column prop="role" label="角色">
       </el-table-column>
       <el-table-column label="操作" width="200" align="center">
         <template slot-scope="scope">
@@ -74,10 +76,10 @@
         width="30%"
     >
       <el-form  label-width="80px" size="small">
-        <el-form-item label="用户名">
+        <el-form-item label="学工号">
           <el-input v-model="form.username" auto-complete="off"></el-input>
         </el-form-item>
-        <el-form-item label="昵称">
+        <el-form-item label="姓名">
           <el-input v-model="form.nickname" auto-complete="off"></el-input>
         </el-form-item>
         <el-form-item label="邮箱">
@@ -88,6 +90,12 @@
         </el-form-item>
         <el-form-item label="地址">
           <el-input v-model="form.address" auto-complete="off"></el-input>
+        </el-form-item>
+        <el-form-item label="角色">
+          <el-select v-model="form.role" placeholder="请选择">
+            <el-option label="学生" value="student"></el-option>
+            <el-option label="老师" value="teacher"></el-option>
+          </el-select>
         </el-form-item>
       </el-form>
       <div slot="footer" class="dialog-footer">
