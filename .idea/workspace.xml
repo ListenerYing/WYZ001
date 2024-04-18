@@ -4,12 +4,24 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="64e422a5-1b65-454a-8710-985bea71f75a" name="Changes" comment="时间管理">
+    <list default="true" id="64e422a5-1b65-454a-8710-985bea71f75a" name="Changes" comment="时间完成">
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__args4j_args4j_2_0_16.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__ch_qos_logback_logback_access_1_2_11.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_github_shibing624_similarity_1_1_6.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_google_collections_google_collections_1_0.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_google_guava_guava_13_0_1.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_hankcs_hanlp_portable_1_3_4.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_hamcrest_hamcrest_all_1_3.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_mockito_mockito_all_1_9_5.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/springboot/src/main/java/com/ying/springboot/controller/MatchController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/springboot/src/main/java/com/ying/springboot/utils/SimilarityTestRunner.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/springboot/src/main/java/com/ying/springboot/utils/TextSimilarityEvaluator.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/jarRepositories.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/jarRepositories.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/springboot/src/main/java/com/ying/springboot/controller/DeadlineController.java" beforeDir="false" afterPath="$PROJECT_DIR$/springboot/src/main/java/com/ying/springboot/controller/DeadlineController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/springboot/src/main/java/com/ying/springboot/controller/IntentionController.java" beforeDir="false" afterPath="$PROJECT_DIR$/springboot/src/main/java/com/ying/springboot/controller/IntentionController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/springboot/vue/src/views/TeacherInfo.vue" beforeDir="false" afterPath="$PROJECT_DIR$/springboot/vue/src/views/TeacherInfo.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/springboot/vue/src/views/User.vue" beforeDir="false" afterPath="$PROJECT_DIR$/springboot/vue/src/views/User.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/springboot/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/springboot/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/springboot/src/test/java/com/ying/springboot/SpringbootApplicationTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/springboot/src/test/java/com/ying/springboot/SpringbootApplicationTests.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/springboot/vue/src/components/Aside.vue" beforeDir="false" afterPath="$PROJECT_DIR$/springboot/vue/src/components/Aside.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/springboot/vue/src/views/Result.vue" beforeDir="false" afterPath="$PROJECT_DIR$/springboot/vue/src/views/Result.vue" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -42,6 +54,7 @@
   <component name="MavenImportPreferences">
     <option name="generalSettings">
       <MavenGeneralSettings>
+        <option name="alwaysUpdateSnapshots" value="true" />
         <option name="localRepository" value="D:\Enviroment\apache-maven-3.8.4\maven-repo" />
         <option name="mavenHome" value="$PROJECT_DIR$/../../Enviroment/apache-maven-3.8.4" />
         <option name="userSettingsFile" value="D:\Enviroment\apache-maven-3.8.4\conf\settings.xml" />
@@ -61,26 +74,26 @@
   <component name="ProjectViewState">
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;RequestMappingsPanelOrder0&quot;: &quot;0&quot;,
-    &quot;RequestMappingsPanelOrder1&quot;: &quot;1&quot;,
-    &quot;RequestMappingsPanelWidth0&quot;: &quot;75&quot;,
-    &quot;RequestMappingsPanelWidth1&quot;: &quot;75&quot;,
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
-    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
-    &quot;last_opened_file_path&quot;: &quot;D:/AHub/WYZ001/springboot/vue/src/store&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;project.structure.last.edited&quot;: &quot;Project&quot;,
-    &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
-    &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;reference.projectsettings.compiler.javacompiler&quot;,
-    &quot;spring.configuration.checksum&quot;: &quot;c1e4cc85cedee0f9019f1bde483c0b3e&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RequestMappingsPanelOrder0": "0",
+    "RequestMappingsPanelOrder1": "1",
+    "RequestMappingsPanelWidth0": "75",
+    "RequestMappingsPanelWidth1": "75",
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "WebServerToolWindowFactoryState": "false",
+    "last_opened_file_path": "D:/AHub/WYZ001/springboot/vue/src/store",
+    "nodejs_package_manager_path": "npm",
+    "project.structure.last.edited": "Project",
+    "project.structure.proportion": "0.15",
+    "project.structure.side.proportion": "0.2",
+    "settings.editor.selected.configurable": "MavenSettings",
+    "spring.configuration.checksum": "c1e4cc85cedee0f9019f1bde483c0b3e",
+    "vue.rearranger.settings.migration": "true"
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="CreateClassDialog.RecentsKey">
       <recent name="com.ying.springboot.mapper" />
@@ -92,6 +105,11 @@
     <key name="CopyClassDialog.RECENTS_KEY">
       <recent name="com.ying.springboot.entity" />
     </key>
+  </component>
+  <component name="RunAnythingCache">
+    <option name="myCommands">
+      <command value="   mvn clean install -U " />
+    </option>
   </component>
   <component name="RunManager" selected="Spring Boot.SpringbootApplication">
     <configuration name="CodeGenerator" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
@@ -106,6 +124,61 @@
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
+    </configuration>
+    <configuration name="SimilarityTestRunner" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.ying.springboot.utils.SimilarityTestRunner" />
+      <module name="com.ying.springboot" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.ying.springboot.utils.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="SpringbootApplicationTests.getSimilarityScore" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="com.ying.springboot" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.ying.springboot.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.ying.springboot" />
+      <option name="MAIN_CLASS_NAME" value="com.ying.springboot.SpringbootApplicationTests" />
+      <option name="METHOD_NAME" value="getSimilarityScore" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="com.ying.springboot [install]" type="MavenRunConfiguration" factoryName="Maven">
+      <MavenSettings>
+        <option name="myGeneralSettings" />
+        <option name="myRunnerSettings" />
+        <option name="myRunnerParameters">
+          <MavenRunnerParameters>
+            <option name="profiles">
+              <set />
+            </option>
+            <option name="goals">
+              <list>
+                <option value="install" />
+                <option value="-U" />
+              </list>
+            </option>
+            <option name="pomFileName" value="pom.xml" />
+            <option name="profilesMap">
+              <map />
+            </option>
+            <option name="resolveToWorkspace" value="false" />
+            <option name="workingDirPath" value="$PROJECT_DIR$/springboot" />
+          </MavenRunnerParameters>
+        </option>
+      </MavenSettings>
+      <method v="2" />
     </configuration>
     <configuration name="SpringbootApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" temporary="true" nameIsGenerated="true">
       <module name="com.ying.springboot" />
@@ -131,13 +204,18 @@
       <method v="2" />
     </configuration>
     <list>
+      <item itemvalue="Application.SimilarityTestRunner" />
       <item itemvalue="Application.CodeGenerator" />
+      <item itemvalue="JUnit.SpringbootApplicationTests.getSimilarityScore" />
+      <item itemvalue="Maven.com.ying.springboot [install]" />
       <item itemvalue="npm.serve" />
       <item itemvalue="Spring Boot.SpringbootApplication" />
     </list>
     <recent_temporary>
       <list>
         <item itemvalue="Spring Boot.SpringbootApplication" />
+        <item itemvalue="Application.SimilarityTestRunner" />
+        <item itemvalue="JUnit.SpringbootApplicationTests.getSimilarityScore" />
         <item itemvalue="Application.CodeGenerator" />
       </list>
     </recent_temporary>
@@ -203,7 +281,8 @@
       <workItem from="1711878855723" duration="13571000" />
       <workItem from="1712209760985" duration="15707000" />
       <workItem from="1712725633188" duration="22117000" />
-      <workItem from="1712905148202" duration="25635000" />
+      <workItem from="1712905148202" duration="30661000" />
+      <workItem from="1713408767483" duration="11914000" />
     </task>
     <task id="LOCAL-00001" summary="完成功能界面设计 后台代码基本框架完成">
       <created>1655620692666</created>
@@ -408,7 +487,14 @@
       <option name="project" value="LOCAL" />
       <updated>1713012591369</updated>
     </task>
-    <option name="localTasksCounter" value="30" />
+    <task id="LOCAL-00030" summary="时间完成">
+      <created>1713079842749</created>
+      <option name="number" value="00030" />
+      <option name="presentableId" value="LOCAL-00030" />
+      <option name="project" value="LOCAL" />
+      <updated>1713079842749</updated>
+    </task>
+    <option name="localTasksCounter" value="31" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -441,7 +527,6 @@
     <ignored-roots>
       <path value="$PROJECT_DIR$/springboot" />
     </ignored-roots>
-    <MESSAGE value="完成功能界面设计 后台代码基本框架完成" />
     <MESSAGE value="完成学生查看志愿信息和导师查看意向学生" />
     <MESSAGE value="pom爆红修改" />
     <MESSAGE value="完成顺序志愿" />
@@ -466,7 +551,8 @@
     <MESSAGE value="志愿删除bug修复" />
     <MESSAGE value="一键分配" />
     <MESSAGE value="时间管理" />
-    <option name="LAST_COMMIT_MESSAGE" value="时间管理" />
+    <MESSAGE value="时间完成" />
+    <option name="LAST_COMMIT_MESSAGE" value="时间完成" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
