@@ -4,23 +4,21 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="64e422a5-1b65-454a-8710-985bea71f75a" name="Changes" comment="时间完成">
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__args4j_args4j_2_0_16.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__ch_qos_logback_logback_access_1_2_11.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_github_shibing624_similarity_1_1_6.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_google_collections_google_collections_1_0.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_google_guava_guava_13_0_1.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_hankcs_hanlp_portable_1_3_4.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_hamcrest_hamcrest_all_1_3.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_mockito_mockito_all_1_9_5.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/springboot/src/main/java/com/ying/springboot/controller/MatchController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/springboot/src/main/java/com/ying/springboot/utils/SimilarityTestRunner.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/springboot/src/main/java/com/ying/springboot/utils/TextSimilarityEvaluator.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/jarRepositories.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/jarRepositories.xml" afterDir="false" />
+    <list default="true" id="64e422a5-1b65-454a-8710-985bea71f75a" name="Changes" comment="文本匹配">
+      <change afterPath="$PROJECT_DIR$/springboot/src/main/java/com/ying/springboot/controller/PeriodController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/springboot/src/main/java/com/ying/springboot/entity/Period.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/springboot/src/main/java/com/ying/springboot/mapper/PeriodMapper.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/springboot/src/main/java/com/ying/springboot/service/IPeriodService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/springboot/src/main/java/com/ying/springboot/service/impl/PeriodServiceImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/springboot/src/main/resources/mapper/PeriodMapper.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/springboot/vue/src/views/TeacherTime.vue" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/springboot/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/springboot/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/springboot/src/test/java/com/ying/springboot/SpringbootApplicationTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/springboot/src/test/java/com/ying/springboot/SpringbootApplicationTests.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/springboot/src/main/java/com/ying/springboot/controller/UserController.java" beforeDir="false" afterPath="$PROJECT_DIR$/springboot/src/main/java/com/ying/springboot/controller/UserController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/springboot/src/main/java/com/ying/springboot/utils/CodeGenerator.java" beforeDir="false" afterPath="$PROJECT_DIR$/springboot/src/main/java/com/ying/springboot/utils/CodeGenerator.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/springboot/vue/src/components/Aside.vue" beforeDir="false" afterPath="$PROJECT_DIR$/springboot/vue/src/components/Aside.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/springboot/vue/src/router/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/springboot/vue/src/router/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/springboot/vue/src/views/Home.vue" beforeDir="false" afterPath="$PROJECT_DIR$/springboot/vue/src/views/Home.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/springboot/vue/src/views/Notice.vue" beforeDir="false" afterPath="$PROJECT_DIR$/springboot/vue/src/views/Notice.vue" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/springboot/vue/src/views/Result.vue" beforeDir="false" afterPath="$PROJECT_DIR$/springboot/vue/src/views/Result.vue" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -214,9 +212,9 @@
     <recent_temporary>
       <list>
         <item itemvalue="Spring Boot.SpringbootApplication" />
+        <item itemvalue="Application.CodeGenerator" />
         <item itemvalue="Application.SimilarityTestRunner" />
         <item itemvalue="JUnit.SpringbootApplicationTests.getSimilarityScore" />
-        <item itemvalue="Application.CodeGenerator" />
       </list>
     </recent_temporary>
   </component>
@@ -282,7 +280,7 @@
       <workItem from="1712209760985" duration="15707000" />
       <workItem from="1712725633188" duration="22117000" />
       <workItem from="1712905148202" duration="30661000" />
-      <workItem from="1713408767483" duration="11914000" />
+      <workItem from="1713408767483" duration="21234000" />
     </task>
     <task id="LOCAL-00001" summary="完成功能界面设计 后台代码基本框架完成">
       <created>1655620692666</created>
@@ -494,7 +492,14 @@
       <option name="project" value="LOCAL" />
       <updated>1713079842749</updated>
     </task>
-    <option name="localTasksCounter" value="31" />
+    <task id="LOCAL-00031" summary="文本匹配">
+      <created>1713423174562</created>
+      <option name="number" value="00031" />
+      <option name="presentableId" value="LOCAL-00031" />
+      <option name="project" value="LOCAL" />
+      <updated>1713423174563</updated>
+    </task>
+    <option name="localTasksCounter" value="32" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -527,7 +532,6 @@
     <ignored-roots>
       <path value="$PROJECT_DIR$/springboot" />
     </ignored-roots>
-    <MESSAGE value="完成学生查看志愿信息和导师查看意向学生" />
     <MESSAGE value="pom爆红修改" />
     <MESSAGE value="完成顺序志愿" />
     <MESSAGE value="完成导师确认" />
@@ -552,7 +556,8 @@
     <MESSAGE value="一键分配" />
     <MESSAGE value="时间管理" />
     <MESSAGE value="时间完成" />
-    <option name="LAST_COMMIT_MESSAGE" value="时间完成" />
+    <MESSAGE value="文本匹配" />
+    <option name="LAST_COMMIT_MESSAGE" value="文本匹配" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

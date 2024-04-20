@@ -10,7 +10,7 @@
 
       <div style="height: 60px; line-height: 60px; text-align: center">
         <img src="../assets/zjut.png" alt="" style="width: 20px; position: relative; top: 5px; right: 5px">
-        <b style="color: white" v-show="logoTextShow">导师制双向选择系统</b>
+        <b style="color: white" v-show="logoTextShow">师生双向选择系统</b>
       </div>
     <div>
       <el-menu-item index="/home">
@@ -64,8 +64,12 @@
             <span slot="title">用户管理</span>
           </el-menu-item>
           <el-menu-item index="/timing">
-            <i class="el-icon-s-custom"></i>
-            <span slot="title">时间管理</span>
+            <i class="el-icon-time"></i>
+            <span slot="title">学生时间管理</span>
+          </el-menu-item>
+          <el-menu-item index="/teachertiming">
+            <i class="el-icon-time"></i>
+            <span slot="title">教师时间管理</span>
           </el-menu-item>
           <el-menu-item index="/notice">
             <i class="el-icon-news"></i>
@@ -75,10 +79,10 @@
         </div>
 
 
-      <el-menu-item index="/progress">
-        <i class="el-icon-time"></i>
-        <span slot="title">查看进度</span>
-      </el-menu-item>
+<!--      <el-menu-item index="/progress">-->
+<!--        <i class="el-icon-time"></i>-->
+<!--        <span slot="title">查看进度</span>-->
+<!--      </el-menu-item>-->
       <el-menu-item index="/result">
         <i class="el-icon-data-board"></i>
         <span slot="title">结果公示</span>

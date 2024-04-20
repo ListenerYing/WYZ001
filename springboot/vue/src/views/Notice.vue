@@ -1,12 +1,12 @@
 <template>
   <div>
-    <div style="margin: 10px 0">
-      <el-input style="width: 200px" placeholder="请输入名称" suffix-icon="el-icon-search" v-model="name"></el-input>
-      <!--      <el-input style="width: 200px" placeholder="请输入" suffix-icon="el-icon-message" class="ml-5" v-model="email"></el-input>-->
-      <!--      <el-input style="width: 200px" placeholder="请输入" suffix-icon="el-icon-position" class="ml-5" v-model="address"></el-input>-->
-      <el-button class="ml-5" type="primary" @click="load">搜索</el-button>
-      <el-button type="warning" @click="reset">重置</el-button>
-    </div>
+<!--    <div style="margin: 10px 0">-->
+<!--      <el-input style="width: 200px" placeholder="请输入标题" suffix-icon="el-icon-search" v-model="name"></el-input>-->
+<!--      &lt;!&ndash;      <el-input style="width: 200px" placeholder="请输入" suffix-icon="el-icon-message" class="ml-5" v-model="email"></el-input>&ndash;&gt;-->
+<!--      &lt;!&ndash;      <el-input style="width: 200px" placeholder="请输入" suffix-icon="el-icon-position" class="ml-5" v-model="address"></el-input>&ndash;&gt;-->
+<!--      <el-button class="ml-5" type="primary" @click="load">搜索</el-button>-->
+<!--      <el-button type="warning" @click="reset">重置</el-button>-->
+<!--    </div>-->
 
     <div style="margin: 10px 0">
       <el-button type="primary" @click="handleAdd">新增 <i class="el-icon-circle-plus-outline"></i></el-button>

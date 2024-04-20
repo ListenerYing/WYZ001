@@ -6,7 +6,7 @@
     <div style="height: 1px; background: #ddd; margin: 20px 0"/>
     <div>
       <el-card style="margin: 10px 0">
-        <div style="padding-bottom: 20px; font-size: 24px">富 文 本 的 系 统 公 告</div>
+        <div style="padding-bottom: 20px; font-size: 24px">双选通知</div>
         <el-collapse accordion v-for="(item, index) in noticeRich">
           <el-collapse-item :name="index + ''">
             <template slot="title">
@@ -45,7 +45,8 @@ export default {
     // })
 
     this.request.get("/notice").then(res => {
-      this.noticeRich = res.data.splice(0, 5).reverse()
+      // this.noticeRich = res.data.splice(0, 5).reverse()
+      this.noticeRich = res.data.reverse()
     })
   }
 }

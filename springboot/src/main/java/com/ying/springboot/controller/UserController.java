@@ -7,11 +7,15 @@ import com.baomidou.mybatisplus.extension.plugins.pagination.Page;
 import com.ying.springboot.common.Constants;
 import com.ying.springboot.common.Result;
 import com.ying.springboot.controller.dto.UserDTO;
+import com.ying.springboot.entity.Period;
 import com.ying.springboot.entity.User;
+import com.ying.springboot.service.IPeriodService;
 import com.ying.springboot.service.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
+import javax.annotation.Resource;
+import java.time.LocalDateTime;
 import java.util.List;
 
 @RestController
@@ -19,6 +23,8 @@ import java.util.List;
 public class UserController {
     @Autowired
     private UserService userService;
+    @Resource
+    private IPeriodService periodService;
 
     //用户登陆
     @PostMapping("/login")
@@ -118,10 +124,27 @@ public class UserController {
                               @RequestParam (defaultValue="") Integer id
 
     ){
+        // 获取当前激活的时间配置
+        QueryWrapper<Period> queryWrapper0 = new QueryWrapper<>();
+        queryWrapper0.eq("is_active", 1); // 假设数据库中 is_active=1 表示激活状态
+        Period activePeriod = periodService.getOne(queryWrapper0);
+        LocalDateTime now = LocalDateTime.now();
+        int sequence;
 
+        // 判断当前时间处于哪个节点
+        if (now.isAfter(activePeriod.getFirstPeriod()) && now.isBefore(activePeriod.getSecondPeriod())) {
+            sequence = 1;
+        } else if (now.isAfter(activePeriod.getSecondPeriod()) && now.isBefore(activePeriod.getThirdPeriod())) {
+            sequence = 2;
+        } else if (now.isAfter(activePeriod.getThirdPeriod())) {
+            sequence = 3;
+        } else {
+            // 如果不在任何定义时间段内，返回错误或默认逻辑
+            return Result.error(Constants.CODE_400,"当前不在教师决策时间内");
+        }
         IPage<User> page=new Page<>(pageNum,pageSize);
         QueryWrapper<User> queryWrapper=new QueryWrapper<>();
-        queryWrapper.inSql("id","SELECT student_id FROM intention WHERE teacher_id="+id+" AND sequence=1");
+        queryWrapper.inSql("id","SELECT student_id FROM intention WHERE teacher_id="+id+" AND sequence="+sequence);
 
 
         return Result.success(userService.page(page,queryWrapper));

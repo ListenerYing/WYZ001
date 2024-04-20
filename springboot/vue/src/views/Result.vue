@@ -3,8 +3,14 @@
     <template>
       <div class="handle-box" v-if="user.role === 'admin'">
         <el-button type="success" style="border-radius: 4px; margin-right: 10px;" @click="exportXlsx">导出Excel</el-button>
-        <el-button style="background-color: #f56c6c; color: white; border-radius: 4px;" @click="assign">一键分配</el-button>
-        <el-button style="background-color: #f56c6c; color: white; border-radius: 4px;" @click="assign2">智能分配</el-button>
+
+        <el-tooltip class="item" effect="dark" content="随机给学生分配一个还有招生名额的老师" placement="top">
+          <el-button type="danger" style="border-radius: 4px; margin-right: 10px;" @click="assign">一键分配</el-button>
+        </el-tooltip>
+
+        <el-tooltip class="item" effect="dark" content="基于学生自述与老师要求的文本匹配度进行智能匹配" placement="top">
+          <el-button type="danger" style="border-radius: 4px;" @click="assign2">智能分配</el-button>
+        </el-tooltip>
       </div>
     </template>
 
@@ -20,9 +26,9 @@
       <el-table-column prop="姓名" label="姓名" width="120">
 
       </el-table-column>
-      <el-table-column prop="导师姓名" label="导师姓名">
+      <el-table-column prop="导师姓名" label="导师姓名" width="120">
       </el-table-column>
-      <el-table-column prop="导师邮箱" label="导师邮箱">
+      <el-table-column prop="导师邮箱" label="导师邮箱" width="170">
       </el-table-column>
 
 
@@ -160,10 +166,16 @@ export default {
 
 <style scoped>
 .handle-box {
+  margin-bottom: 20px; /* 添加了一行 */
   display: flex;
   align-items: center;
   justify-content: start;
 }
+/*.handle-box {*/
+/*  display: flex;*/
+/*  align-items: center;*/
+/*  justify-content: start;*/
+/*}*/
 
 .el-button {
   margin-right: 10px; /* 控制按钮之间的间距 */
