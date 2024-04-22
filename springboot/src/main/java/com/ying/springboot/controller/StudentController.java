@@ -3,12 +3,15 @@ package com.ying.springboot.controller;
 import com.baomidou.mybatisplus.core.conditions.query.QueryWrapper;
 import com.baomidou.mybatisplus.core.metadata.IPage;
 import com.baomidou.mybatisplus.extension.plugins.pagination.Page;
+import com.ying.springboot.common.Constants;
 import com.ying.springboot.common.Result;
 import com.ying.springboot.entity.Intention;
 import com.ying.springboot.entity.Student;
+import com.ying.springboot.entity.Teacher;
 import com.ying.springboot.entity.User;
 import com.ying.springboot.service.IIntentionService;
 import com.ying.springboot.service.IStudentService;
+import com.ying.springboot.service.ITeacherService;
 import com.ying.springboot.service.UserService;
 import org.springframework.jdbc.core.JdbcTemplate;
 import org.springframework.web.bind.annotation.*;
@@ -35,6 +38,8 @@ public class StudentController {
         private UserService userService;
         @Resource
         private JdbcTemplate jdbcTemplate;
+        @Resource
+        private ITeacherService teacherService;
         @GetMapping
         public Result getAll(){return Result.success(studentService.list());}
         //根据id查询
@@ -57,6 +62,17 @@ public class StudentController {
         @GetMapping("/saveTeacherId/{id}")
         public Result saveTeacherId(@RequestParam Integer id,
                                     @RequestParam Integer tid) {
+                Teacher teacher = teacherService.getById(tid);
+                // 计算指定老师当前的学生数
+                // 创建QueryWrapper实例
+                QueryWrapper<Student> studentQueryWrapper = new QueryWrapper<>();
+                studentQueryWrapper.eq("teacher_id", tid);
+
+// 使用wrapper查询当前老师的学生数
+                long currentStudentCount = studentService.count(studentQueryWrapper);
+                if (currentStudentCount >= teacher.getEnrollment()) {
+                        return Result.error(Constants.CODE_500,"您的招生人数已满");
+                }
                 Student student=new Student();
                 student.setId(id);
                 student.setTeacherId(tid);

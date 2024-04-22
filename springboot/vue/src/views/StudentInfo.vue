@@ -190,7 +190,7 @@ export default {
             if(res.data){
               this.$message.success("选择成功！")
             }else {
-              this.$message.error("选择失败！")
+              this.$message.error(res.msg)
             }
             this.load()
           }

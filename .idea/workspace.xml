@@ -4,15 +4,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="64e422a5-1b65-454a-8710-985bea71f75a" name="Changes" comment="教师截止时间前端">
+    <list default="true" id="64e422a5-1b65-454a-8710-985bea71f75a" name="Changes" comment="双选逻辑修改完成">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/springboot/src/main/java/com/ying/springboot/controller/IntentionController.java" beforeDir="false" afterPath="$PROJECT_DIR$/springboot/src/main/java/com/ying/springboot/controller/IntentionController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/springboot/doc/wyz.sql" beforeDir="false" afterPath="$PROJECT_DIR$/springboot/doc/wyz.sql" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/springboot/src/main/java/com/ying/springboot/controller/StudentController.java" beforeDir="false" afterPath="$PROJECT_DIR$/springboot/src/main/java/com/ying/springboot/controller/StudentController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/springboot/src/main/java/com/ying/springboot/controller/UserController.java" beforeDir="false" afterPath="$PROJECT_DIR$/springboot/src/main/java/com/ying/springboot/controller/UserController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/springboot/src/main/java/com/ying/springboot/entity/Period.java" beforeDir="false" afterPath="$PROJECT_DIR$/springboot/src/main/java/com/ying/springboot/entity/Period.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/springboot/vue/src/views/Home.vue" beforeDir="false" afterPath="$PROJECT_DIR$/springboot/vue/src/views/Home.vue" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/springboot/vue/src/views/StudentInfo.vue" beforeDir="false" afterPath="$PROJECT_DIR$/springboot/vue/src/views/StudentInfo.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/springboot/vue/src/views/TeacherTime.vue" beforeDir="false" afterPath="$PROJECT_DIR$/springboot/vue/src/views/TeacherTime.vue" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -65,26 +61,26 @@
   <component name="ProjectViewState">
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "RequestMappingsPanelOrder0": "0",
-    "RequestMappingsPanelOrder1": "1",
-    "RequestMappingsPanelWidth0": "75",
-    "RequestMappingsPanelWidth1": "75",
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "WebServerToolWindowFactoryState": "false",
-    "last_opened_file_path": "D:/AHub/WYZ001/springboot/vue/src/store",
-    "nodejs_package_manager_path": "npm",
-    "project.structure.last.edited": "Project",
-    "project.structure.proportion": "0.15",
-    "project.structure.side.proportion": "0.2",
-    "settings.editor.selected.configurable": "MavenSettings",
-    "spring.configuration.checksum": "c1e4cc85cedee0f9019f1bde483c0b3e",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RequestMappingsPanelOrder0&quot;: &quot;0&quot;,
+    &quot;RequestMappingsPanelOrder1&quot;: &quot;1&quot;,
+    &quot;RequestMappingsPanelWidth0&quot;: &quot;75&quot;,
+    &quot;RequestMappingsPanelWidth1&quot;: &quot;75&quot;,
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;last_opened_file_path&quot;: &quot;D:/AHub/WYZ001/springboot/vue/src/store&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;Project&quot;,
+    &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
+    &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;MavenSettings&quot;,
+    &quot;spring.configuration.checksum&quot;: &quot;c1e4cc85cedee0f9019f1bde483c0b3e&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CreateClassDialog.RecentsKey">
       <recent name="com.ying.springboot.mapper" />
@@ -273,7 +269,8 @@
       <workItem from="1712209760985" duration="15707000" />
       <workItem from="1712725633188" duration="22117000" />
       <workItem from="1712905148202" duration="30661000" />
-      <workItem from="1713408767483" duration="28602000" />
+      <workItem from="1713408767483" duration="28783000" />
+      <workItem from="1713780468453" duration="2193000" />
     </task>
     <task id="LOCAL-00001" summary="完成功能界面设计 后台代码基本框架完成">
       <created>1655620692666</created>
@@ -499,7 +496,14 @@
       <option name="project" value="LOCAL" />
       <updated>1713612249991</updated>
     </task>
-    <option name="localTasksCounter" value="33" />
+    <task id="LOCAL-00033" summary="双选逻辑修改完成">
+      <created>1713779750658</created>
+      <option name="number" value="00033" />
+      <option name="presentableId" value="LOCAL-00033" />
+      <option name="project" value="LOCAL" />
+      <updated>1713779750658</updated>
+    </task>
+    <option name="localTasksCounter" value="34" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -532,7 +536,6 @@
     <ignored-roots>
       <path value="$PROJECT_DIR$/springboot" />
     </ignored-roots>
-    <MESSAGE value="完成顺序志愿" />
     <MESSAGE value="完成导师确认" />
     <MESSAGE value="数据库同步&#10;完成选择功能" />
     <MESSAGE value="fortest" />
@@ -557,7 +560,8 @@
     <MESSAGE value="时间完成" />
     <MESSAGE value="文本匹配" />
     <MESSAGE value="教师截止时间前端" />
-    <option name="LAST_COMMIT_MESSAGE" value="教师截止时间前端" />
+    <MESSAGE value="双选逻辑修改完成" />
+    <option name="LAST_COMMIT_MESSAGE" value="双选逻辑修改完成" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
