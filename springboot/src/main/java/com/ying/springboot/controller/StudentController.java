@@ -4,8 +4,10 @@ import com.baomidou.mybatisplus.core.conditions.query.QueryWrapper;
 import com.baomidou.mybatisplus.core.metadata.IPage;
 import com.baomidou.mybatisplus.extension.plugins.pagination.Page;
 import com.ying.springboot.common.Result;
+import com.ying.springboot.entity.Intention;
 import com.ying.springboot.entity.Student;
 import com.ying.springboot.entity.User;
+import com.ying.springboot.service.IIntentionService;
 import com.ying.springboot.service.IStudentService;
 import com.ying.springboot.service.UserService;
 import org.springframework.jdbc.core.JdbcTemplate;
@@ -25,7 +27,8 @@ import java.util.List;
 @RestController
 @RequestMapping("/student")
 public class StudentController {
-
+        @Resource
+        private IIntentionService intentionService;
         @Resource
         private IStudentService studentService;
         @Resource
@@ -57,7 +60,9 @@ public class StudentController {
                 Student student=new Student();
                 student.setId(id);
                 student.setTeacherId(tid);
-
+                QueryWrapper<Intention> queryWrapper = new QueryWrapper<>();
+                queryWrapper.eq("student_id", id);
+                intentionService.remove(queryWrapper);
                 return Result.success(studentService.updateById(student));
         }
         //分页查询

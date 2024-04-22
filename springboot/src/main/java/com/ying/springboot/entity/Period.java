@@ -37,7 +37,8 @@ public class Period implements Serializable {
 
     @ApiModelProperty("第三志愿开始判断时间")
     private LocalDateTime thirdPeriod;
-
+    @ApiModelProperty("第三志愿结束时间")
+    private LocalDateTime endTime;
     @ApiModelProperty("当前记录是否激活，0为未激活，1为激活")
     private Boolean isActive;
 

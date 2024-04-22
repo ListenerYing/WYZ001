@@ -36,7 +36,7 @@
               icon="el-icon-info"
               icon-color="#67C23A"
               title="确定选择这位学生嘛？"
-              @confirm="handleChoose(scope.row.id)"
+              @confirm="handleChoose2(scope.row.id)"
 
           >
             <el-button type="success" icon="el-icon-check" slot="reference" style="margin-left: 5px" >选择</el-button>
@@ -47,7 +47,7 @@
               icon="el-icon-info"
               icon-color="#67C23A"
               title="确定不要这位学生嘛？"
-              @confirm="del(scope.row.id)"
+              @confirm="del2(scope.row.id)"
 
           >
             <el-button type="danger" icon="el-icon-delete-solid" slot="reference" style="margin-left: 5px" >不要</el-button>
@@ -179,6 +179,25 @@ export default {
       )
 
     },
+    handleChoose2(id){
+      this.request.get("/student/saveTeacherId/"+id,{
+        params:{
+          id:id,
+          tid:this.user.id
+
+        }
+      }).then(res=>{
+            if(res.data){
+              this.$message.success("选择成功！")
+            }else {
+              this.$message.error("选择失败！")
+            }
+            this.load()
+          }
+
+      )
+
+    },
     //查看学生的详细信息
     handleDetail(id){
       this.request.get("/student/"+id).then(res=>{
@@ -194,6 +213,7 @@ export default {
       // this.form=Object.assign({},row)
       // this.dialogFormVisible=true
     },
+    //原删除逻辑
     del(id){
 
       this.request.get("/intention/push/"+id).then(res=>{
@@ -202,6 +222,21 @@ export default {
           this.load()
         }else {
           this.$message.error("PUSH失败！")
+        }
+
+      })
+
+
+    },
+    //新删除逻辑
+    del2(id){
+
+      this.request.post("/intention/deleteByStudentIdAndSeq/"+id).then(res=>{
+        if(res.data){
+          this.$message.success("志愿退回成功！")
+          this.load()
+        }else {
+          this.$message.error("志愿退回失败！")
         }
 
       })

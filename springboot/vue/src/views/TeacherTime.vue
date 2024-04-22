@@ -11,6 +11,7 @@
       <el-table-column prop="secondPeriod" label="第二志愿开始时间"></el-table-column>
 
       <el-table-column prop="thirdPeriod" label="第三志愿开始时间"></el-table-column>
+      <el-table-column prop="endTime" label="截止时间"></el-table-column>
       <!-- 是否激活列 -->
       <el-table-column prop="isActive" label="是否激活">
         <template slot-scope="scope">
@@ -55,6 +56,9 @@
         <el-form-item label="第三志愿开始时间">
           <el-date-picker v-model="form.thirdPeriod" type="datetime" placeholder="选择日期时间"></el-date-picker>
         </el-form-item>
+        <el-form-item label="截止时间">
+          <el-date-picker v-model="form.endTime" type="datetime" placeholder="选择日期时间"></el-date-picker>
+        </el-form-item>
       </el-form>
       <div slot="footer" class="dialog-footer">
         <!-- 取消按钮 -->
@@ -87,6 +91,7 @@ export default {
         firstPeriod: '',
         secondPeriod: '',
         thirdPeriod: '',
+        endTime:'',
 
       },
       // 标记当前行为是创建还是编辑
@@ -113,7 +118,7 @@ export default {
     // 打开创建时间配置的对话框
     handleAdd() {
       this.currentAction = 'create';
-      this.form = { id: null, description: '', firstPeriod: '', secondPeriod: '',thirdPeriod: '' };
+      this.form = { id: null, description: '', firstPeriod: '', secondPeriod: '',thirdPeriod: '',endTime: '', };
       this.dialogVisible = true;
     },
     // 打开编辑时间配置的对话框

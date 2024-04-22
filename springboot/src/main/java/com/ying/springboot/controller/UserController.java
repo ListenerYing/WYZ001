@@ -136,7 +136,7 @@ public class UserController {
             sequence = 1;
         } else if (now.isAfter(activePeriod.getSecondPeriod()) && now.isBefore(activePeriod.getThirdPeriod())) {
             sequence = 2;
-        } else if (now.isAfter(activePeriod.getThirdPeriod())) {
+        } else if(now.isAfter(activePeriod.getThirdPeriod())&& now.isBefore(activePeriod.getEndTime())) {
             sequence = 3;
         } else {
             // 如果不在任何定义时间段内，返回错误或默认逻辑
