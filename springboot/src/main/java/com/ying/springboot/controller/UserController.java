@@ -7,6 +7,7 @@ import com.baomidou.mybatisplus.extension.plugins.pagination.Page;
 import com.ying.springboot.common.Constants;
 import com.ying.springboot.common.Result;
 import com.ying.springboot.controller.dto.UserDTO;
+import com.ying.springboot.controller.dto.UserPasswordDTO;
 import com.ying.springboot.entity.Period;
 import com.ying.springboot.entity.User;
 import com.ying.springboot.service.IPeriodService;
@@ -202,6 +203,11 @@ public class UserController {
 
     }
 
+    @PostMapping("/password")   //    /user/password
+    public Result password(@RequestBody UserPasswordDTO userPasswordDTO) {
+        userService.updatePassword(userPasswordDTO);
+        return Result.success();
+    }
 
 
 }

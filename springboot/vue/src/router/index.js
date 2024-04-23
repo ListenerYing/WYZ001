@@ -20,6 +20,7 @@ const routes = [
       { path: 'user', name: '用户管理', component: () => import('../views/User.vue')},
       { path: 'notice', name: '系统公告', component: () => import('../views/Notice.vue')},
       { path: 'person', name: '个人信息', component: () => import('../views/Person.vue')},
+      { path: 'password', name: '修改密码', component: () => import('../views/Password.vue')},
       { path: 'timing', name: '学生时间设置', component: () => import('../views/Time.vue')},
       { path: 'teachertiming', name: '教师时间设置', component: () => import('../views/TeacherTime.vue')},
       {

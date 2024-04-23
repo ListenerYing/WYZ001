@@ -4,11 +4,16 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="64e422a5-1b65-454a-8710-985bea71f75a" name="Changes" comment="双选逻辑修改完成">
+    <list default="true" id="64e422a5-1b65-454a-8710-985bea71f75a" name="Changes" comment="教师招生人数限制">
+      <change afterPath="$PROJECT_DIR$/springboot/src/main/java/com/ying/springboot/controller/dto/UserPasswordDTO.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/springboot/vue/src/views/Password.vue" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/springboot/doc/wyz.sql" beforeDir="false" afterPath="$PROJECT_DIR$/springboot/doc/wyz.sql" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/springboot/src/main/java/com/ying/springboot/controller/StudentController.java" beforeDir="false" afterPath="$PROJECT_DIR$/springboot/src/main/java/com/ying/springboot/controller/StudentController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/springboot/vue/src/views/StudentInfo.vue" beforeDir="false" afterPath="$PROJECT_DIR$/springboot/vue/src/views/StudentInfo.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/springboot/src/main/java/com/ying/springboot/controller/UserController.java" beforeDir="false" afterPath="$PROJECT_DIR$/springboot/src/main/java/com/ying/springboot/controller/UserController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/springboot/src/main/java/com/ying/springboot/mapper/UserMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/springboot/src/main/java/com/ying/springboot/mapper/UserMapper.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/springboot/src/main/java/com/ying/springboot/service/UserService.java" beforeDir="false" afterPath="$PROJECT_DIR$/springboot/src/main/java/com/ying/springboot/service/UserService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/springboot/src/main/java/com/ying/springboot/service/impl/UserServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/springboot/src/main/java/com/ying/springboot/service/impl/UserServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/springboot/vue/src/components/Header.vue" beforeDir="false" afterPath="$PROJECT_DIR$/springboot/vue/src/components/Header.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/springboot/vue/src/router/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/springboot/vue/src/router/index.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -270,7 +275,8 @@
       <workItem from="1712725633188" duration="22117000" />
       <workItem from="1712905148202" duration="30661000" />
       <workItem from="1713408767483" duration="28783000" />
-      <workItem from="1713780468453" duration="2193000" />
+      <workItem from="1713780468453" duration="3152000" />
+      <workItem from="1713869613681" duration="2476000" />
     </task>
     <task id="LOCAL-00001" summary="完成功能界面设计 后台代码基本框架完成">
       <created>1655620692666</created>
@@ -503,7 +509,14 @@
       <option name="project" value="LOCAL" />
       <updated>1713779750658</updated>
     </task>
-    <option name="localTasksCounter" value="34" />
+    <task id="LOCAL-00034" summary="教师招生人数限制">
+      <created>1713782704804</created>
+      <option name="number" value="00034" />
+      <option name="presentableId" value="LOCAL-00034" />
+      <option name="project" value="LOCAL" />
+      <updated>1713782704804</updated>
+    </task>
+    <option name="localTasksCounter" value="35" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -536,7 +549,6 @@
     <ignored-roots>
       <path value="$PROJECT_DIR$/springboot" />
     </ignored-roots>
-    <MESSAGE value="完成导师确认" />
     <MESSAGE value="数据库同步&#10;完成选择功能" />
     <MESSAGE value="fortest" />
     <MESSAGE value="完成志愿推送" />
@@ -561,7 +573,8 @@
     <MESSAGE value="文本匹配" />
     <MESSAGE value="教师截止时间前端" />
     <MESSAGE value="双选逻辑修改完成" />
-    <option name="LAST_COMMIT_MESSAGE" value="双选逻辑修改完成" />
+    <MESSAGE value="教师招生人数限制" />
+    <option name="LAST_COMMIT_MESSAGE" value="教师招生人数限制" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

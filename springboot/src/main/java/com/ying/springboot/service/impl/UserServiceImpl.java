@@ -8,6 +8,7 @@ import com.baomidou.mybatisplus.extension.plugins.pagination.Page;
 import com.baomidou.mybatisplus.extension.service.impl.ServiceImpl;
 import com.ying.springboot.common.Constants;
 import com.ying.springboot.controller.dto.UserDTO;
+import com.ying.springboot.controller.dto.UserPasswordDTO;
 import com.ying.springboot.ecxeption.ServiceException;
 import com.ying.springboot.entity.User;
 import com.ying.springboot.mapper.UserMapper;
@@ -72,4 +73,12 @@ public class UserServiceImpl extends ServiceImpl<UserMapper, User> implements Us
     public IPage<User> getResult(Page<User> page) {
         return userMapper.getResult(page);
     }
+    @Override
+    public void updatePassword(UserPasswordDTO userPasswordDTO) {
+        int update = userMapper.updatePassword(userPasswordDTO);
+        if (update < 1) {
+            throw new ServiceException(Constants.CODE_600, "密码错误");
+        }
+    }
+
 }
