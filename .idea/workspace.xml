@@ -4,8 +4,14 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="64e422a5-1b65-454a-8710-985bea71f75a" name="Changes" comment="修改密码">
+    <list default="true" id="64e422a5-1b65-454a-8710-985bea71f75a" name="Changes" comment="sql">
+      <change afterPath="$PROJECT_DIR$/springboot/vue/src/assets/stacked-peaks-haikei.svg" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/springboot/doc/wyz.sql" beforeDir="false" afterPath="$PROJECT_DIR$/springboot/doc/wyz.sql" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/springboot/src/main/java/com/ying/springboot/SpringbootApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/springboot/src/main/java/com/ying/springboot/SpringbootApplication.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/springboot/src/main/java/com/ying/springboot/controller/IntentionController.java" beforeDir="false" afterPath="$PROJECT_DIR$/springboot/src/main/java/com/ying/springboot/controller/IntentionController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/springboot/src/main/java/com/ying/springboot/utils/SimilarityTestRunner.java" beforeDir="false" afterPath="$PROJECT_DIR$/springboot/src/main/java/com/ying/springboot/utils/SimilarityTestRunner.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/springboot/vue/src/views/Login.vue" beforeDir="false" afterPath="$PROJECT_DIR$/springboot/vue/src/views/Login.vue" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -198,8 +204,8 @@
     <recent_temporary>
       <list>
         <item itemvalue="Spring Boot.SpringbootApplication" />
-        <item itemvalue="Application.CodeGenerator" />
         <item itemvalue="Application.SimilarityTestRunner" />
+        <item itemvalue="Application.CodeGenerator" />
         <item itemvalue="JUnit.SpringbootApplicationTests.getSimilarityScore" />
       </list>
     </recent_temporary>
@@ -271,7 +277,7 @@
       <workItem from="1713869613681" duration="3104000" />
       <workItem from="1714030075124" duration="2436000" />
       <workItem from="1714141568644" duration="2774000" />
-      <workItem from="1714484639532" duration="1673000" />
+      <workItem from="1714484639532" duration="24485000" />
     </task>
     <task id="LOCAL-00001" summary="完成功能界面设计 后台代码基本框架完成">
       <created>1655620692666</created>
@@ -518,7 +524,14 @@
       <option name="project" value="LOCAL" />
       <updated>1713879054781</updated>
     </task>
-    <option name="localTasksCounter" value="36" />
+    <task id="LOCAL-00036" summary="sql">
+      <created>1714543098673</created>
+      <option name="number" value="00036" />
+      <option name="presentableId" value="LOCAL-00036" />
+      <option name="project" value="LOCAL" />
+      <updated>1714543098673</updated>
+    </task>
+    <option name="localTasksCounter" value="37" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -551,7 +564,6 @@
     <ignored-roots>
       <path value="$PROJECT_DIR$/springboot" />
     </ignored-roots>
-    <MESSAGE value="fortest" />
     <MESSAGE value="完成志愿推送" />
     <MESSAGE value="完成学生新增志愿" />
     <MESSAGE value="sql&#10;更新" />
@@ -576,7 +588,8 @@
     <MESSAGE value="双选逻辑修改完成" />
     <MESSAGE value="教师招生人数限制" />
     <MESSAGE value="修改密码" />
-    <option name="LAST_COMMIT_MESSAGE" value="修改密码" />
+    <MESSAGE value="sql" />
+    <option name="LAST_COMMIT_MESSAGE" value="sql" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

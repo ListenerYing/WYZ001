@@ -18,8 +18,10 @@ public class SimilarityTestRunner {
 
         // 输出计算结果
 
-        String text1 = "于2008年取得英国计算机科学博士学位，发表多篇期刊和会议文章。现指导多名研究生从事计算机科学、教育技术学和神经科学等方面的教学和研究工作。";
-        String text2 = "我深深迷恋古人所说的读万卷书，行万里路。因此我一爱看书，二爱旅行。";
+//        String text1 = "于2008年取得英国计算机科学博士学位，发表多篇期刊和会议文章。现指导多名研究生从事计算机科学、教育技术学和神经科学等方面的教学和研究工作。";
+//        String text2 = "我深深迷恋古人所说的读万卷书，行万里路。因此我一爱看书，二爱旅行。";
+        String text1 = "我不喜欢看电视，也不喜欢看电影";
+        String text2 = "我喜欢看电视，不喜欢看电影";
         TextSimilarity cosSimilarity = new CosineSimilarity();
         double score1 = cosSimilarity.getSimilarity(text1, text2);
         System.out.println("cos相似度分值：" + score1);

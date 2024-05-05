@@ -57,9 +57,17 @@ export default {
 </script>
 
 <style>
+/*.wrapper {*/
+/*  height: 100vh;*/
+/*  background-image: linear-gradient(to bottom right, #FC466B , #3F5EFB);*/
+/*  overflow: hidden;*/
+/*}*/
 .wrapper {
   height: 100vh;
-  background-image: linear-gradient(to bottom right, #FC466B , #3F5EFB);
+  background-image: url('../assets/stacked-peaks-haikei.svg');
+  background-size: cover; /* 或者设置为 contain 根据你的需求*/
+  background-repeat: no-repeat;
+  background-position: center;
   overflow: hidden;
 }
 </style>

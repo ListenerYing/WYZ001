@@ -16,6 +16,7 @@ import com.ying.springboot.service.IDeadlineService;
 import com.ying.springboot.service.IPeriodService;
 import com.ying.springboot.service.UserService;
 import io.swagger.models.auth.In;
+import org.springframework.scheduling.annotation.Scheduled;
 import org.springframework.transaction.annotation.Isolation;
 import org.springframework.transaction.annotation.Transactional;
 import org.springframework.web.bind.annotation.*;
@@ -240,4 +241,22 @@ public class IntentionController {
                 }
         }
 
+
+
+                @Scheduled(fixedRate = 12 * 60 * 60 * 1000, initialDelay = 12 * 60 * 60 * 1000)
+                public void clearIntentionRecords() {
+                // 获取当前激活的时间配置
+                QueryWrapper<Period> queryWrapper0 = new QueryWrapper<>();
+                queryWrapper0.eq("is_active", 1); // 假设数据库中 is_active=1 表示激活状态
+                Period activePeriod = periodService.getOne(queryWrapper0);
+                LocalDateTime now = LocalDateTime.now();
+
+                LocalDateTime EndTime = activePeriod.getEndTime();
+
+                if (EndTime != null && now.isAfter(EndTime)) {
+                        // 使用MyBatis Plus提供的方法删除整个表的内容
+                        intentionService.remove(new QueryWrapper<Intention>());
+                        System.out.println("All intentions have been cleared after the deadline.");
+                }
+        }
 }
