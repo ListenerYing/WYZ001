@@ -34,7 +34,7 @@
         <el-input type="textarea" v-model="form.address" autocomplete="off" autosize></el-input>
       </el-form-item>
       <el-form-item label="招生人数" v-if="user.role==='老师'" prop="enrollment">
-        <el-input-number v-model="extra.enrollment" autocomplete="off" :min="1" :max="6"></el-input-number>
+        <el-input-number v-model="extra.enrollment" autocomplete="off" :min="1" :max="10"></el-input-number>
       </el-form-item>
 
       <el-form-item label="要求"  v-if="user.role==='老师'">

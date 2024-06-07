@@ -4,14 +4,14 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="64e422a5-1b65-454a-8710-985bea71f75a" name="Changes" comment="sql">
-      <change afterPath="$PROJECT_DIR$/springboot/vue/src/assets/stacked-peaks-haikei.svg" afterDir="false" />
+    <list default="true" id="64e422a5-1b65-454a-8710-985bea71f75a" name="Changes" comment="到时间清空志愿">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/springboot/doc/wyz.sql" beforeDir="false" afterPath="$PROJECT_DIR$/springboot/doc/wyz.sql" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/springboot/src/main/java/com/ying/springboot/SpringbootApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/springboot/src/main/java/com/ying/springboot/SpringbootApplication.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/springboot/src/main/java/com/ying/springboot/controller/IntentionController.java" beforeDir="false" afterPath="$PROJECT_DIR$/springboot/src/main/java/com/ying/springboot/controller/IntentionController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/springboot/src/main/java/com/ying/springboot/controller/StudentController.java" beforeDir="false" afterPath="$PROJECT_DIR$/springboot/src/main/java/com/ying/springboot/controller/StudentController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/springboot/src/main/java/com/ying/springboot/utils/SimilarityTestRunner.java" beforeDir="false" afterPath="$PROJECT_DIR$/springboot/src/main/java/com/ying/springboot/utils/SimilarityTestRunner.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/springboot/vue/src/views/Login.vue" beforeDir="false" afterPath="$PROJECT_DIR$/springboot/vue/src/views/Login.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/springboot/vue/src/views/Im.vue" beforeDir="false" afterPath="$PROJECT_DIR$/springboot/vue/src/views/Im.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/springboot/vue/src/views/Person.vue" beforeDir="false" afterPath="$PROJECT_DIR$/springboot/vue/src/views/Person.vue" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -101,7 +101,7 @@
       <command value="   mvn clean install -U " />
     </option>
   </component>
-  <component name="RunManager" selected="Spring Boot.SpringbootApplication">
+  <component name="RunManager" selected="Application.SimilarityTestRunner">
     <configuration name="CodeGenerator" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="com.ying.springboot.utils.CodeGenerator" />
       <module name="com.ying.springboot" />
@@ -203,8 +203,8 @@
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="Spring Boot.SpringbootApplication" />
         <item itemvalue="Application.SimilarityTestRunner" />
+        <item itemvalue="Spring Boot.SpringbootApplication" />
         <item itemvalue="Application.CodeGenerator" />
         <item itemvalue="JUnit.SpringbootApplicationTests.getSimilarityScore" />
       </list>
@@ -277,7 +277,12 @@
       <workItem from="1713869613681" duration="3104000" />
       <workItem from="1714030075124" duration="2436000" />
       <workItem from="1714141568644" duration="2774000" />
-      <workItem from="1714484639532" duration="24485000" />
+      <workItem from="1714484639532" duration="28166000" />
+      <workItem from="1715574702196" duration="6897000" />
+      <workItem from="1715785831854" duration="1262000" />
+      <workItem from="1715826485111" duration="1792000" />
+      <workItem from="1716185941697" duration="3212000" />
+      <workItem from="1717771609681" duration="124000" />
     </task>
     <task id="LOCAL-00001" summary="完成功能界面设计 后台代码基本框架完成">
       <created>1655620692666</created>
@@ -531,7 +536,14 @@
       <option name="project" value="LOCAL" />
       <updated>1714543098673</updated>
     </task>
-    <option name="localTasksCounter" value="37" />
+    <task id="LOCAL-00037" summary="到时间清空志愿">
+      <created>1714904825334</created>
+      <option name="number" value="00037" />
+      <option name="presentableId" value="LOCAL-00037" />
+      <option name="project" value="LOCAL" />
+      <updated>1714904825334</updated>
+    </task>
+    <option name="localTasksCounter" value="38" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -564,7 +576,6 @@
     <ignored-roots>
       <path value="$PROJECT_DIR$/springboot" />
     </ignored-roots>
-    <MESSAGE value="完成志愿推送" />
     <MESSAGE value="完成学生新增志愿" />
     <MESSAGE value="sql&#10;更新" />
     <MESSAGE value="解决上移bug" />
@@ -589,7 +600,8 @@
     <MESSAGE value="教师招生人数限制" />
     <MESSAGE value="修改密码" />
     <MESSAGE value="sql" />
-    <option name="LAST_COMMIT_MESSAGE" value="sql" />
+    <MESSAGE value="到时间清空志愿" />
+    <option name="LAST_COMMIT_MESSAGE" value="到时间清空志愿" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

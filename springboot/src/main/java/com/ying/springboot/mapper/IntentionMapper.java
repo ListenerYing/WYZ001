@@ -10,7 +10,7 @@ import org.apache.ibatis.annotations.Mapper;
  * </p>
  *
  * @author 应健霆
- * @since 2022-06-19
+
  */
 @Mapper
 public interface IntentionMapper extends BaseMapper<Intention> {

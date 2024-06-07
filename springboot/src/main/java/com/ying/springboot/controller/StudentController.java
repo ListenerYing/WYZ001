@@ -25,7 +25,7 @@ import java.util.List;
  * </p>
  *
  * @author 应健霆
- * @since 2022-06-18
+
  */
 @RestController
 @RequestMapping("/student")

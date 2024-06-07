@@ -12,7 +12,7 @@ import org.springframework.stereotype.Service;
  * </p>
  *
  * @author 应健霆
- * @since 2022-06-19
+
  */
 @Service
 public class IntentionServiceImpl extends ServiceImpl<IntentionMapper, Intention> implements IIntentionService {

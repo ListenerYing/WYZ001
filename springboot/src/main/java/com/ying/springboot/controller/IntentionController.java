@@ -243,7 +243,7 @@ public class IntentionController {
 
 
 
-                @Scheduled(fixedRate = 12 * 60 * 60 * 1000, initialDelay = 12 * 60 * 60 * 1000)
+                @Scheduled(fixedRate = 24 * 60 * 60 * 1000, initialDelay = 12 * 60 * 60 * 1000)
                 public void clearIntentionRecords() {
                 // 获取当前激活的时间配置
                 QueryWrapper<Period> queryWrapper0 = new QueryWrapper<>();
